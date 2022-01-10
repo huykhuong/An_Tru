@@ -17,7 +17,7 @@ const DishComponent = ({ img, title, description, price }) => {
       {/* Contents div */}
       <div className="text-black flex flex-col lg:w-64 lg:h-64 lg:px-4 lg:items-center lg:text-center 2xl:w-60 2xl:h-60">
         <h3 className="text-md mb-1 md:text-lg lg:mb-4">{title}</h3>
-        <p className="flex-grow text-xs md:text-sm opacity-60 font-josephin">
+        <p className="flex-grow text-xs !leading-4 lg:!leading-7 md:text-sm opacity-60 font-sans">
           {description}
         </p>
         <p className="text-sm text-lighter_green">{price}</p>

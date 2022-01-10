@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const [navBarScroll, setNavBarScroll] = useState(false);
-  const [mobileMenuChosenOption, setMobileMenuChosenOption] = useState(1);
   const router = useRouter();
 
   let windowPathname;
@@ -28,10 +27,10 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-black text-white font-josephin font-light z-30 ${
+      className={`bg-primary text-white font-josephin font-light sticky top-0 z-30 ${
         navBarScroll
-          ? "animate-headerScrollDown sticky top-0 "
-          : "relative lg:!bg-transparent lg:border-b lg:border-opacity-20"
+          ? "lg:animate-headerScrollDown sticky top-0"
+          : "lg:relative lg:!bg-transparent lg:border-b lg:border-opacity-20"
       }`}
     >
       <section>
@@ -48,22 +47,38 @@ const Header = () => {
 
             {/* Navigations */}
             <div className="hidden cursor-pointer lg:flex gap-x-16">
-              <div className="navBarElement" onClick={() => router.push("/")}>
+              <div
+                className={`navBarElement ${
+                  windowPathname === "/" && "text-bright_yellow"
+                }`}
+                onClick={() => router.push("/")}
+              >
                 Trang chủ
               </div>
               <div
-                className="navBarElement"
+                className={`navBarElement ${
+                  windowPathname === "/menu" && "text-bright_yellow"
+                }`}
                 onClick={() => router.push("/menu")}
               >
                 Menu
               </div>
               <div
-                className="navBarElement"
+                className={`navBarElement ${
+                  windowPathname === "/about" && "text-bright_yellow"
+                }`}
                 onClick={() => router.push("/about")}
               >
                 Về chúng tôi
               </div>
-              <div className="navBarElement">Liên hệ</div>
+              <div
+                className={`navBarElement ${
+                  windowPathname === "/contact" && "text-bright_yellow"
+                }`}
+                onClick={() => router.push("/contact")}
+              >
+                Liên hệ
+              </div>
             </div>
 
             {/* Mobile Menu button */}
@@ -81,8 +96,8 @@ const Header = () => {
       {/* Mobile Navigations */}
       <div
         className={`${
-          openMobileNav ? "h-[260px]" : "h-0"
-        } mt-3 px-[2rem] overflow-hidden md:px-16 bg-black text-white transition-all duration-300 ease-in-out space-y-10 font-bold lg:hidden 
+          openMobileNav ? "h-[260px] pt-5 pb-0" : "h-0"
+        } px-[2rem] overflow-hidden md:px-16 bg-black text-white transition-all duration-300 ease-in-out space-y-10 font-bold lg:hidden 
       `}
       >
         <div
@@ -103,7 +118,7 @@ const Header = () => {
         >
           Về chúng tôi
         </div>
-        <div onClick={() => router.push("/menu")}>Liên hệ</div>
+        <div onClick={() => router.push("/contact")}>Liên hệ</div>
       </div>
     </header>
   );

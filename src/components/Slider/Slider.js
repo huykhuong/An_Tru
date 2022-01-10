@@ -27,7 +27,7 @@ const Slider = () => {
   }, [current]);
 
   return (
-    <section className="relative -mt-[76px] lg:-mt-[88px] h-screen flex justify-center items-center">
+    <section className="relative -mt-[64px] lg:-mt-[88px] h-screen flex justify-center items-center">
       <ArrowNarrowLeftIcon
         className="hidden lg:block absolute top-1/2 left-20 h-8 w-8 text-white z-20 cursor-pointer select-none"
         onClick={prevSlide}

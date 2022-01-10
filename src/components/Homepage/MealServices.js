@@ -7,9 +7,9 @@ const MealServices = () => {
       {/* Meals */}
       <div className="flex flex-col items-center px-20 py-10 bg-white w-full text-black text-center">
         <h1 className="text-5xl font-secondary">
-          <span className="text-secondary">Các</span> bữa ăn
+          <span className="text-bright_yellow">Các</span> bữa ăn
         </h1>
-        <p className="text-gray-600 mt-5 lg:max-w-4xl font-josephin">
+        <p className="leading-7 text-gray-600 mt-5 lg:max-w-4xl font-sans md:leading-8">
           Aenean sodales dictum augue, in faucibus nisi sollicitudin eu. Nulla
           semper arcu vel diam auctor. condimentum. Nam molestie sem eu quam
           fermentum a tempus nisi aliquet.
@@ -30,7 +30,7 @@ const MealServices = () => {
             <h2 className="text-2xl text-secondary font-medium font-prata">
               Bữa sáng
             </h2>
-            <p className="text-gray-600 font-sans">
+            <p className="leading-7 text-gray-600 font-sans md:leading-8">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>
@@ -49,7 +49,7 @@ const MealServices = () => {
             <h2 className="text-2xl text-secondary font-medium font-prata">
               Bữa trưa
             </h2>
-            <p className="text-gray-600 font-sans">
+            <p className="leading-7 text-gray-600 font-sans md:leading-8">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>
@@ -66,7 +66,7 @@ const MealServices = () => {
               />
             </div>
             <h2 className="text-2xl text-secondary font-medium">Bữa tối</h2>
-            <p className="text-gray-600 font-sans">
+            <p className="leading-7 text-gray-600 font-sans md:leading-8">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>

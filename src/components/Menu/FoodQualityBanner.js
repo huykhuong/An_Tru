@@ -7,7 +7,7 @@ const FoodQualityBanner = () => {
           <h1 className="text-black font-prata text-2xl w-40 mx-auto">
             Thực phẩm chất lượng
           </h1>
-          <p className="text-black font-josephin font-normal text-opacity-50 text-md">
+          <p className="paragraph text-black !font-josephin !opacity-80">
             A heaping mountain of rings, handmade with Panko breading and
             shredded coconut flakes.
           </p>
@@ -22,7 +22,7 @@ const FoodQualityBanner = () => {
           <h1 className="text-black font-prata text-2xl w-40 mx-auto">
             Nguyên liệu sạch
           </h1>
-          <p className="text-black font-josephin font-light text-md">
+          <p className="paragraph text-black !font-josephin !opacity-80">
             A heaping mountain of rings, handmade with Panko breading and
             shredded coconut flakes.
           </p>

@@ -55,11 +55,10 @@ const AboutUs = () => {
       </div>
       {/* Text Content */}
       <div className="md:z-10 md:pr-[30%]">
-        {/* Black background */}
+        {/*Background */}
         <MoveUpAnimation
-          stylingClasses={`md:bg-black md:bg-opacity-70 md:-ml-20 md:py-10 max-w-[700px] text-center`}
+          stylingClasses={`md:bg-primary md:bg-opacity-70 md:-ml-20 md:py-10 max-w-[700px] text-center`}
           initialPosition={30}
-          className="md:bg-black md:bg-opacity-70 md:-ml-20 md:py-10 max-w-[700px] text-center"
         >
           <MoveUpAnimation stylingClasses={`mt-7`} initialPosition={60}>
             <h1 className="upperHeading">Về </h1>

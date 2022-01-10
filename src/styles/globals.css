@@ -6,7 +6,7 @@
 
 @layer components {
   .paragraph {
-    @apply font-light opacity-40;
+    @apply text-white font-light opacity-40 text-[16px] font-sans leading-7 md:text-sm md:leading-8 lg:text-[16px] xl:text-[17px];
   }
   .upperHeading {
     @apply font-secondary text-bright_yellow text-3xl md:text-4xl;
@@ -16,5 +16,8 @@
   }
   .navBarElement {
     @apply hover:text-bright_yellow font-normal transition-all duration-300 ease-in-out;
+  }
+  .footerHeading {
+    @apply font-prata text-white text-[18px];
   }
 }

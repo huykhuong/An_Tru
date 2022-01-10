@@ -19,6 +19,7 @@ export default function Home() {
         ></meta>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Homepage of An Tru" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
       </Head>
 
       <Header />
