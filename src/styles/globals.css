@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@200;300;400&family=Open+Sans&family=Playfair+Display&family=Poppins:ital,wght@0,200;0,400;0,600;0,800;0,900;1,100;1,200;1,300;1,400&family=Prata&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .paragraph {
+    @apply font-light opacity-40;
+  }
+  .upperHeading {
+    @apply font-secondary text-bright_yellow text-3xl md:text-4xl;
+  }
+  .lowerHeading {
+    @apply font-prata text-white text-2xl md:text-3xl -mt-5 mb-5;
+  }
+  .navBarElement {
+    @apply hover:text-bright_yellow font-normal transition-all duration-300 ease-in-out;
+  }
+}
