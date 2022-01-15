@@ -5,7 +5,7 @@ const ContactInfo = () => {
   return (
     <section className="flex flex-col py-10 px-2 gap-y-5 text-white lg:flex-row lg:max-w-screen-xl lg:pl-10">
       <StaggeredMoveUpComponent delay={0.1} stylingClasses="flex flex-1/3">
-        <PhoneIcon className="h-6 px-5 lg:h-6 text-bright_yellow lg:px-10" />
+        <PhoneIcon className="homepageContactIcon lg:px-10" />
         <div>
           <p className="font-josephin">000 (123) 456 7890</p>
           <p className="paragraph">
@@ -15,7 +15,7 @@ const ContactInfo = () => {
       </StaggeredMoveUpComponent>
 
       <StaggeredMoveUpComponent delay={0.3} stylingClasses="flex flex-1/3">
-        <LocationMarkerIcon className="h-6 px-5 lg:h-6 text-bright_yellow lg:px-10" />
+        <LocationMarkerIcon className="homepageContactIcon lg:px-10" />
         <div>
           <p className="font-josephin">198 West 21th Street</p>
           <p className="paragraph">
@@ -27,7 +27,7 @@ const ContactInfo = () => {
       <StaggeredMoveUpComponent delay={0.5} stylingClasses="flex flex-1/3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 px-5 text-bright_yellow "
+          className="homepageContactIcon"
           viewBox="0 0 20 20"
           fill="currentColor"
         >

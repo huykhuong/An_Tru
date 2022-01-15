@@ -1,13 +1,12 @@
 import { MenuIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const [navBarScroll, setNavBarScroll] = useState(false);
+  const [windowPathname, setWindowPathname] = useState();
   const router = useRouter();
-
-  let windowPathname;
 
   const changeNavBarAppearance = () => {
     if (window.scrollY >= 270) {
@@ -17,9 +16,12 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    setWindowPathname(router.pathname);
+  }, [router.pathname]);
+
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeNavBarAppearance);
-    windowPathname = window.location.pathname;
   }
 
   // When you change a positioning property in CSS (such as top, left, bottom, right or z-index) you have to specify a position property other than static (the default).
@@ -57,7 +59,9 @@ const Header = () => {
               </div>
               <div
                 className={`navBarElement ${
-                  windowPathname === "/menu" && "text-bright_yellow"
+                  (windowPathname === "/menu" ||
+                    windowPathname === "/menu/[dish]") &&
+                  "text-bright_yellow"
                 }`}
                 onClick={() => router.push("/menu")}
               >
@@ -102,23 +106,31 @@ const Header = () => {
       >
         <div
           onClick={() => router.push("/")}
-          className={`${windowPathname === "/" && "text-secondary"}`}
+          className={`${windowPathname === "/" && "text-bright_yellow"}`}
         >
           Trang chủ
         </div>
         <div
           onClick={() => router.push("/menu")}
-          className={`${windowPathname === "/menu" && "text-secondary"}`}
+          className={`${
+            (windowPathname === "/menu" || windowPathname === "/menu/[dish]") &&
+            "text-bright_yellow"
+          }`}
         >
           Menu
         </div>
         <div
           onClick={() => router.push("/about")}
-          className={`${windowPathname === "/about" && "text-secondary"}`}
+          className={`${windowPathname === "/about" && "text-bright_yellow"}`}
         >
           Về chúng tôi
         </div>
-        <div onClick={() => router.push("/contact")}>Liên hệ</div>
+        <div
+          onClick={() => router.push("/contact")}
+          className={`${windowPathname === "/contact" && "text-bright_yellow"}`}
+        >
+          Liên hệ
+        </div>
       </div>
     </header>
   );

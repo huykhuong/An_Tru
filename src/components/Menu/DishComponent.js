@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const DishComponent = ({ img, title, description, price }) => {
+  const router = useRouter();
   return (
     // Overall div
-    <div className="flex gap-x-4 md:gap-x-10 mt-14 transform lg:hover:scale-[1.02] transition duration-150 lg:gap-x-0 lg:w-1/2 lg:pb-10 2xl:w-1/3">
+    <div
+      onClick={() => router.push(`/menu/${title}`)}
+      className="flex gap-x-4 md:gap-x-10 mt-14 cursor-pointer transform lg:hover:scale-[1.02] transition duration-150 lg:gap-x-0 lg:w-1/2 lg:pb-10 2xl:w-1/3"
+    >
       {/* Image div */}
       <div className="relative h-32 w-32 md:h-40 md:w-40 flex-shrink-0 lg:w-64 lg:h-64 2xl:w-60 2xl:h-60">
         <Image

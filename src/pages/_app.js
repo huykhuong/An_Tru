@@ -5,7 +5,7 @@ import ProgressBar from "@badrap/bar-of-progress";
 
 function MyApp({ Component, pageProps }) {
   const progress = new ProgressBar({
-    size: 4,
+    size: 3,
     color: "#C49B63",
     className: "z-50",
     delay: 100,

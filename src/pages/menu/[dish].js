@@ -1,11 +1,10 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import BannerImage from "../../components/AboutUs/BannerImage";
-import Story from "../../components/AboutUs/Story";
 import Footer from "../../components/GeneralUI/Footer";
 import Header from "../../components/GeneralUI/Header";
+import InfoSection from "../../components/Menu/DetailPage/InfoSection";
 
-export default function About() {
+const DishDetail = () => {
   return (
     <Fragment>
       <Head>
@@ -17,16 +16,19 @@ export default function About() {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           name="description"
-          content="Trang Về Chúng Tôi của Nhà hàng chay An Trú"
+          content="Trang thông tin chi tiết món ăn của Nhà hàng chay An Trú"
         />
       </Head>
 
       <Header />
-      <main className="lg:-mt-[88px] text-white font-prata">
-        <BannerImage />
-        <Story />
+
+      <main>
+        <InfoSection />
       </main>
+
       <Footer />
     </Fragment>
   );
-}
+};
+
+export default DishDetail;

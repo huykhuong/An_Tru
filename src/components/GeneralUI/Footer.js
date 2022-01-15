@@ -9,10 +9,10 @@ import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary flex flex-col justify-center items-start px-5 py-10 max-w-[450px] mx-auto gap-y-10 md:flex-row md:max-w-full md:gap-x-3 xl:px-[450px] lg:flex-row lg:px-20 lg:gap-x-20">
+    <footer className="bg-primary flex flex-col justify-center items-start px-5 py-10 mx-auto gap-y-10 md:flex-row md:max-w-full md:gap-x-3 lg:flex-row lg:px-20 lg:gap-x-20 xl:px-48">
       {/* The restaurant */}
       <div className="md:flex-1/3">
-        <h1 className="footerHeading">Nhà hàng An Trú</h1>
+        <h1 className="footerHeading">Nhà hàng chay An Trú</h1>
         <p className="paragraph text-white mt-4">
           Cảm ơn quý khách đã dành sự quan tâm đến chúng tôi
         </p>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/StaggeredMoveUpComponent";
+import { motion } from "framer-motion";
 
 const Story = () => {
   return (

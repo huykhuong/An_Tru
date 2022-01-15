@@ -13,16 +13,17 @@ const FullMenuBanner = () => {
           <h1 className="upperHeading">Khám phá</h1>
           <h3 className="lowerHeading">Menu của chúng tôi</h3>
 
-          <p className="text-white text-sm md:text-lg opacity-80 font-light mb-5 lg:mb-10">
+          <p className="fullMenuParagraph">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in Bookmarksgrove right at the coast of the Semantics
           </p>
         </StaggeredMoveUpComponent>
+
         <StaggeredMoveUpComponent delay={0.4} stylingClasses="">
           <button
             onClick={() => router.push("/menu")}
-            className="px-3 py-2 text-xs md:px-4 md:py-3 md:text-sm text-secondary border border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-out "
+            className="fullMenuButton"
           >
             View Full Menu
           </button>

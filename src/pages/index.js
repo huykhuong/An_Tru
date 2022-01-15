@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Fragment } from "react";
 import Footer from "../components/GeneralUI/Footer";
 import Header from "../components/GeneralUI/Header";
 import AboutUs from "../components/Homepage/AboutUs";
@@ -10,7 +11,7 @@ import MealServices from "../components/Homepage/MealServices";
 
 export default function Home() {
   return (
-    <div>
+    <Fragment>
       <Head>
         <title>Nhà hàng An Trú</title>
         <meta
@@ -32,6 +33,6 @@ export default function Home() {
         <FullMenuBanner />
       </main>
       <Footer />
-    </div>
+    </Fragment>
   );
 }

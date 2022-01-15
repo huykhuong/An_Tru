@@ -5,6 +5,7 @@ import BannerImage from "../../components/Menu/BannerImage";
 import DishComponent from "../../components/Menu/DishComponent";
 import FoodQualityBanner from "../../components/Menu/FoodQualityBanner";
 import StaggeredMoveUpComponent from "../../components/FramerMotionReusableComponents/StaggeredMoveUpComponent";
+import { Fragment } from "react";
 
 const KhaiViArray = [
   {
@@ -94,7 +95,7 @@ const TrangMiengArray = [
 
 export default function Menu() {
   return (
-    <div>
+    <Fragment>
       <Head>
         <title>Nhà hàng An Trú</title>
         <meta
@@ -102,7 +103,10 @@ export default function Menu() {
           content="width=device-width, initial-scale=1"
         ></meta>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Menu of An Tru" />
+        <meta
+          name="description"
+          content="Trang Menu của Nhà hàng chay An Trú"
+        />
       </Head>
 
       <Header />
@@ -189,7 +193,7 @@ export default function Menu() {
         </section>
       </main>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

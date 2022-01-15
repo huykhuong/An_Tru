@@ -20,4 +20,31 @@
   .footerHeading {
     @apply font-prata text-white text-[18px];
   }
+  .menuDetailHeading {
+    @apply font-prata  font-semibold text-primary text-[21px] mb-5 lg:text-[23px];
+  }
+  .inputField {
+    @apply font-josephin pb-2 mb-5 bg-transparent border-b-[0.5px] border-opacity-30 focus:outline-none focus:border-b-secondary placeholder-white transition duration-300;
+  }
+  .contactInfo {
+    @apply paragraph text-secondary opacity-100 font-normal;
+  }
+  .bannerNavigationButton {
+    @apply hidden lg:block absolute top-1/2 h-8 w-8 text-white z-20 cursor-pointer select-none;
+  }
+  .homepageContactIcon {
+    @apply h-6 px-5 lg:h-6 text-secondary;
+  }
+  .mealServiceParagraph {
+    @apply leading-7 text-gray-600 font-sans md:leading-8;
+  }
+  .mealServiceHeading {
+    @apply text-2xl text-secondary font-medium font-prata;
+  }
+  .fullMenuParagraph {
+    @apply text-white text-sm md:text-lg opacity-80 font-light mb-5 lg:mb-10;
+  }
+  .fullMenuButton {
+    @apply px-3 py-2 text-xs md:px-4 md:py-3 md:text-sm text-secondary border border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-out;
+  }
 }

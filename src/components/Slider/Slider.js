@@ -29,11 +29,11 @@ const Slider = () => {
   return (
     <section className="relative -mt-[64px] lg:-mt-[88px] h-screen flex justify-center items-center">
       <ArrowNarrowLeftIcon
-        className="hidden lg:block absolute top-1/2 left-20 h-8 w-8 text-white z-20 cursor-pointer select-none"
+        className="bannerNavigationButton left-20"
         onClick={prevSlide}
       />
       <ArrowNarrowRightIcon
-        className="hidden lg:block absolute top-1/2 right-20 h-8 w-8 text-lg text-white z-20 cursor-pointer select-none"
+        className="bannerNavigationButton right-20"
         onClick={nextSlide}
       />
       {SliderData.map((slide, index) => {
@@ -48,7 +48,8 @@ const Slider = () => {
           >
             {index === current && (
               <div>
-                <div className="absolute flex flex-col justify-center items-center z-10 top-0 right-0 h-full w-full bg-black bg-opacity-40 text-center">
+                {/* Overlay div */}
+                <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
                   <motion.div
                     variants={{
                       initial: {
@@ -77,8 +78,7 @@ const Slider = () => {
                   objectFit="cover"
                   layout="fill"
                   src={slide.image}
-                  alt="travel image"
-                  className="w-screen h-screen"
+                  alt={slide.title}
                 />
               </div>
             )}
