@@ -35,68 +35,77 @@ const Header = () => {
           : "lg:relative lg:!bg-transparent lg:border-b lg:border-opacity-20"
       }`}
     >
-      <section>
-        <nav className="lg:mx-auto lg:max-w-[53rem] xl:max-w-6xl">
-          {/* Nav Contents */}
-          <div className="flex justify-between items-center px-7 py-4 md:px-16 lg:py-7">
-            {/* Logo */}
+      <nav className="lg:mx-auto lg:max-w-[53rem] xl:max-w-6xl">
+        {/* Nav Contents */}
+        <div className="flex justify-between items-center px-7 py-4 md:px-16 lg:py-7">
+          {/* Logo */}
+          <div
+            className="text-2xl md:text-2xl cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            An trú
+          </div>
+
+          {/* Navigations */}
+          <div className="hidden cursor-pointer lg:flex gap-x-16">
             <div
-              className="text-2xl md:text-2xl cursor-pointer"
+              className={`navBarElement ${
+                windowPathname === "/" && "text-bright_yellow"
+              }`}
               onClick={() => router.push("/")}
             >
-              An trú
+              Trang chủ
             </div>
-
-            {/* Navigations */}
-            <div className="hidden cursor-pointer lg:flex gap-x-16">
-              <div
-                className={`navBarElement ${
-                  windowPathname === "/" && "text-bright_yellow"
-                }`}
-                onClick={() => router.push("/")}
-              >
-                Trang chủ
-              </div>
-              <div
-                className={`navBarElement ${
-                  (windowPathname === "/menu" ||
-                    windowPathname === "/menu/[dish]") &&
-                  "text-bright_yellow"
-                }`}
-                onClick={() => router.push("/menu")}
-              >
-                Menu
-              </div>
-              <div
-                className={`navBarElement ${
-                  windowPathname === "/about" && "text-bright_yellow"
-                }`}
-                onClick={() => router.push("/about")}
-              >
-                Về chúng tôi
-              </div>
-              <div
-                className={`navBarElement ${
-                  windowPathname === "/contact" && "text-bright_yellow"
-                }`}
-                onClick={() => router.push("/contact")}
-              >
-                Liên hệ
-              </div>
-            </div>
-
-            {/* Mobile Menu button */}
             <div
-              className="lg:hidden cursor-pointer"
-              onClick={() => {
-                setOpenMobileNav(!openMobileNav);
-              }}
+              className={`navBarElement ${
+                (windowPathname === "/menu" ||
+                  windowPathname === "/menu/[dish]") &&
+                "text-bright_yellow"
+              }`}
+              onClick={() => router.push("/menu")}
             >
-              <MenuIcon className="h-7" />
+              Menu
+            </div>
+            <div
+              className={`navBarElement ${
+                windowPathname === "/about" && "text-bright_yellow"
+              }`}
+              onClick={() => router.push("/about")}
+            >
+              Về chúng tôi
+            </div>
+            <div
+              className={`navBarElement ${
+                (windowPathname === "/blog" ||
+                  windowPathname === "/blog/[slug]") &&
+                "text-bright_yellow"
+              }`}
+              onClick={() => router.push("/blog")}
+            >
+              Blog
+            </div>
+            <div
+              className={`navBarElement ${
+                windowPathname === "/contact" && "text-bright_yellow"
+              }`}
+              onClick={() => router.push("/contact")}
+            >
+              Liên hệ
             </div>
           </div>
-        </nav>
-      </section>
+
+          {/* Mobile Menu button */}
+          <div
+            className="lg:hidden cursor-pointer"
+            onClick={() => {
+              setOpenMobileNav(!openMobileNav);
+            }}
+          >
+            <MenuIcon className="h-7" />
+          </div>
+        </div>
+      </nav>
+
       {/* Mobile Navigations */}
       <div
         className={`${

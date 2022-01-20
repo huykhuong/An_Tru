@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Header from "../../components/GeneralUI/Header";
 import Footer from "../../components/GeneralUI/Footer";
-import BannerImage from "../../components/Menu/BannerImage";
 import DishComponent from "../../components/Menu/DishComponent";
 import FoodQualityBanner from "../../components/Menu/FoodQualityBanner";
 import StaggeredMoveUpComponent from "../../components/FramerMotionReusableComponents/StaggeredMoveUpComponent";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import BannerImage from "../../components/GeneralUI/BannerImage";
+import CategoryOptions from "../../components/Menu/CategoryOptions";
 
 const KhaiViArray = [
   {
@@ -94,6 +95,12 @@ const TrangMiengArray = [
 ];
 
 export default function Menu() {
+  const [selectedCategory, setSelectedCategory] = useState(0);
+
+  const selectCategory = (value) => {
+    setSelectedCategory(value);
+  };
+
   return (
     <Fragment>
       <Head>
@@ -113,76 +120,81 @@ export default function Menu() {
 
       <main className="lg:-mt-[88px] text-white font-prata">
         {/* Parallax Banner Image */}
-        <BannerImage />
+        <BannerImage
+          upperHeading="Menu"
+          lowerHeading="Của chúng tôi"
+          img="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        />
+
+        {/* Category Options */}
+        <CategoryOptions
+          selectedCategory={selectedCategory}
+          selectCategory={selectCategory}
+        />
 
         {/* Dishes section */}
-        <section className="bg-white py-10 px-3 md:px-10 2xl:px-24 h-full lg:pb-40">
-          <StaggeredMoveUpComponent
-            stylingClasses="text-primary text-2xl font-bold"
-            delay={0.2}
-          >
-            <h2>Món khai vị</h2>
-          </StaggeredMoveUpComponent>
-          {/* List of dishes */}
-          <StaggeredMoveUpComponent
-            stylingClasses="lg:flex lg:flex-wrap"
-            delay={0.3}
-          >
-            {KhaiViArray.map(({ img, title, description, price }, i) => (
-              <DishComponent
-                key={title}
-                img={img}
-                title={title}
-                description={description}
-                price={price}
-                index={i}
-              />
-            ))}
-          </StaggeredMoveUpComponent>
+        <section className="bg-white py-10 px-3 h-full md:px-10 lg:pb-40 2xl:px-24">
+          {selectedCategory === 0 && (
+            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+              <h2 className="menuPageHeading">Cơm</h2>
 
-          <StaggeredMoveUpComponent
-            stylingClasses="text-primary text-2xl font-bold mt-20 lg:mt-28"
-            delay={0.2}
-          >
-            <h2>Món chính</h2>
-          </StaggeredMoveUpComponent>
-          <StaggeredMoveUpComponent
-            stylingClasses="lg:flex lg:flex-wrap"
-            delay={0.3}
-          >
-            {MonChinhArray.map(({ img, title, description, price }, i) => (
-              <DishComponent
-                key={title}
-                img={img}
-                title={title}
-                description={description}
-                price={price}
-                index={i}
-              />
-            ))}
-          </StaggeredMoveUpComponent>
+              {/* List of dishes */}
+              <div className="lg:flex lg:flex-wrap">
+                {KhaiViArray.map(({ img, title, description, price }, i) => (
+                  <DishComponent
+                    key={title}
+                    img={img}
+                    title={title}
+                    description={description}
+                    price={price}
+                    index={i}
+                  />
+                ))}
+              </div>
+            </StaggeredMoveUpComponent>
+          )}
 
-          <StaggeredMoveUpComponent
-            stylingClasses="text-primary text-2xl font-bold mt-20 lg:mt-28"
-            delay={0.2}
-          >
-            <h2>Tráng miệng</h2>
-          </StaggeredMoveUpComponent>
-          <StaggeredMoveUpComponent
-            stylingClasses="lg:flex lg:flex-wrap mb-20"
-            delay={0.3}
-          >
-            {TrangMiengArray.map(({ img, title, description, price }, i) => (
-              <DishComponent
-                key={title}
-                img={img}
-                title={title}
-                description={description}
-                price={price}
-                index={i}
-              />
-            ))}
-          </StaggeredMoveUpComponent>
+          {selectedCategory === 1 && (
+            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+              <h2 className="menuPageHeading">Mỳ</h2>
+
+              {/* List of dishes */}
+              <div className="lg:flex lg:flex-wrap">
+                {MonChinhArray.map(({ img, title, description, price }, i) => (
+                  <DishComponent
+                    key={title}
+                    img={img}
+                    title={title}
+                    description={description}
+                    price={price}
+                    index={i}
+                  />
+                ))}
+              </div>
+            </StaggeredMoveUpComponent>
+          )}
+
+          {selectedCategory === 2 && (
+            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+              <h2 className="menuPageHeading">Tráng Miệng</h2>
+
+              {/* List of dishes */}
+              <div className="lg:flex lg:flex-wrap">
+                {TrangMiengArray.map(
+                  ({ img, title, description, price }, i) => (
+                    <DishComponent
+                      key={title}
+                      img={img}
+                      title={title}
+                      description={description}
+                      price={price}
+                      index={i}
+                    />
+                  )
+                )}
+              </div>
+            </StaggeredMoveUpComponent>
+          )}
         </section>
 
         {/* Food quality and ingredient section | Laptop/desktop view only */}

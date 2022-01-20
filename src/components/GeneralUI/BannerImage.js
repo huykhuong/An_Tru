@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 
-const BannerImage = () => {
+const BannerImage = ({ upperHeading, lowerHeading, img }) => {
   return (
-    <section className="bg-[url('https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80')] min-h-[1000px] bg-[center_right_-20rem] lg:bg-[center_right_0rem] xl:bg-[center_right_0rem] lg:bg-fixed bg-no-repeat bg-cover relative">
+    <section
+      style={{
+        backgroundImage: `url(${img})`,
+      }}
+      className="min-h-[1000px] lg:bg-fixed bg-center bg-no-repeat bg-cover relative"
+    >
       <div className="absolute h-full w-full bg-black bg-opacity-30 flex flex-col justify-center items-center">
         <motion.h1
           variants={{
@@ -25,8 +30,8 @@ const BannerImage = () => {
           className="text-3xl lg:text-4xl"
         >
           <div className="text-center">
-            <h1 className="upperHeading">Liên hệ</h1>
-            <h1 className="lowerHeading">Đến chúng tôi</h1>
+            <h1 className="upperHeading">{upperHeading}</h1>
+            <h1 className="lowerHeading">{lowerHeading}</h1>
           </div>
         </motion.h1>
       </div>

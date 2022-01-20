@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import BannerImage from "../../components/AboutUs/BannerImage";
 import Story from "../../components/AboutUs/Story";
+import BannerImage from "../../components/GeneralUI/BannerImage";
 import Footer from "../../components/GeneralUI/Footer";
 import Header from "../../components/GeneralUI/Header";
 
@@ -23,7 +23,11 @@ export default function About() {
 
       <Header />
       <main className="lg:-mt-[88px] text-white font-prata">
-        <BannerImage />
+        <BannerImage
+          upperHeading="Về"
+          lowerHeading="Chúng tôi"
+          img="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        />
         <Story />
       </main>
       <Footer />

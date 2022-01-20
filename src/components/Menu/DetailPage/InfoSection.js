@@ -73,7 +73,7 @@ const InfoSection = () => {
               opacity: 1,
               transition: { duration: 0.6, delay: 1 },
             }}
-            className="lg:mb-10 lg:text-[20px] lg:text-white absolute top-[520px]"
+            className="lg:mb-10 lg:text-[20px] lg:text-primary bg-white px-8 py-1 absolute top-[520px] h-[32px]"
           >
             {dummyData.price}
           </motion.h1>
@@ -81,7 +81,7 @@ const InfoSection = () => {
           {/* Vietnamese Title */}
           {title === 0 && (
             <motion.div
-              className="text-6xl text-center text-white xl:text-7xl absolute top-[600px]"
+              className="menuDetailPageDishTitle"
               animate={{
                 opacity: [1, 0],
                 transition: { duration: 1, delay: 5 },
@@ -111,7 +111,7 @@ const InfoSection = () => {
           {/* English Title */}
           {title === 1 && (
             <motion.div
-              className="text-6xl text-center text-white xl:text-7xl absolute top-[600px]"
+              className="menuDetailPageDishTitle"
               animate={{
                 opacity: [1, 0],
                 transition: { duration: 1, delay: 5 },
@@ -150,12 +150,9 @@ const InfoSection = () => {
             y: 0,
             transition: { duration: 0.6, delay: 1.4 },
           }}
-          className=""
         >
           <h1 className="menuDetailHeading">Mô tả</h1>
-          <p className="paragraph text-black opacity-60 font-normal font-josephin">
-            {dummyData.description}
-          </p>
+          <p className="menuDetailPageParagraph">{dummyData.description}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 200 }}
@@ -166,9 +163,7 @@ const InfoSection = () => {
           }}
         >
           <h1 className="menuDetailHeading">Nguyên liệu</h1>
-          <p className="paragraph text-black opacity-60 font-normal font-josephin">
-            Dầu mè, bơ, tỏi
-          </p>
+          <p className="menuDetailPageParagraph">Dầu mè, bơ, tỏi</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 200 }}
@@ -179,7 +174,7 @@ const InfoSection = () => {
           }}
         >
           <h1 className="menuDetailHeading">Chú ý</h1>
-          <p className="paragraph text-black opacity-60 font-normal font-josephin">
+          <p className="menuDetailPageParagraph">
             Món ăn có chứa đậu, không dành cho người dị ứng với đậu
           </p>
         </motion.div>

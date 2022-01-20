@@ -9,6 +9,7 @@ module.exports = {
       "scontent.fsgn2-3.fna.fbcdn.net",
       "scontent.fsgn2-2.fna.fbcdn.net",
       "raw.githubusercontent.com",
+      "media.graphcms.com",
     ],
   },
   env: {

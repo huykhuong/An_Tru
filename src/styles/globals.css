@@ -12,7 +12,7 @@
     @apply font-secondary text-bright_yellow text-3xl md:text-4xl;
   }
   .lowerHeading {
-    @apply font-prata text-white text-2xl md:text-3xl -mt-5 mb-5;
+    @apply font-prata text-white text-2xl md:text-3xl mb-5;
   }
   .navBarElement {
     @apply hover:text-bright_yellow font-normal transition-all duration-300 ease-in-out;
@@ -46,5 +46,32 @@
   }
   .fullMenuButton {
     @apply px-3 py-2 text-xs md:px-4 md:py-3 md:text-sm text-secondary border border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-out;
+  }
+  .menuPageHeading {
+    @apply text-primary text-2xl font-bold;
+  }
+  .menuDetailPageParagraph {
+    @apply paragraph text-black opacity-60 font-normal font-josephin;
+  }
+  .menuDetailPageDishTitle {
+    @apply text-6xl text-center text-white xl:text-7xl absolute top-[600px];
+  }
+  .menuPageUnselectedCategory {
+    @apply cursor-pointer font-josephin text-lighter_green border border-lighter_green px-3 py-1 rounded-full;
+  }
+  .menuPageSelectedCategory {
+    @apply cursor-pointer font-josephin text-white bg-lighter_green border border-lighter_green px-3 py-1 rounded-full;
+  }
+  .aboutUsPageParagraph {
+    @apply text-sm opacity-60 font-sans text-black leading-7 mt-5 px-9 md:text-sm md:px-14 md:leading-8 md:w-[600px] lg:w-[700px] lg:text-[16px] xl:text-[17px] mx-auto;
+  }
+  .aboutUsPageFounderName {
+    @apply text-[21px] mt-4 md:mt-10;
+  }
+  .aboutUsPageFounderPosition {
+    @apply text-[16px] opacity-80 mt-5;
+  }
+  .footerIcons {
+    @apply h-6 pr-5 mt-1;
   }
 }

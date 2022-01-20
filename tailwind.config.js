@@ -11,7 +11,7 @@ module.exports = {
         2000: "2000ms",
       },
       backgroundImage: {
-        "black-background": "url('/bg_4.jpg')",
+        "black-background": "url('/bg_4.webp')",
       },
       colors: {
         primary: "#0C3B2E",

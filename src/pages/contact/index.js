@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import BannerImage from "../../components/ContactUs/BannerImage";
 import CommentSection from "../../components/ContactUs/CommentSection";
 import ContactInfo from "../../components/ContactUs/ContactInfo";
+import BannerImage from "../../components/GeneralUI/BannerImage";
 import Footer from "../../components/GeneralUI/Footer";
 import Header from "../../components/GeneralUI/Header";
 import Map from "../../components/MapBox/Map";
@@ -26,7 +26,11 @@ export default function Contact() {
       <Header />
 
       <main className="lg:-mt-[88px] text-white font-prata">
-        <BannerImage />
+        <BannerImage
+          upperHeading="Liên hệ"
+          lowerHeading="Đến chúng tôi"
+          img="https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
+        />
         <div className="lg:flex lg:justify-center lg:items-start lg:py-16">
           <ContactInfo />
           <CommentSection />
