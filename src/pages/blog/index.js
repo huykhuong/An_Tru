@@ -1,9 +1,12 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import PostCard from "../../components/Blog/PostCard";
-import BannerImage from "../../components/GeneralUI/BannerImage";
-import Footer from "../../components/GeneralUI/Footer";
-import Header from "../../components/GeneralUI/Header";
+import dynamic from "next/dynamic";
+const BannerImage = dynamic(() =>
+  import("../../components/GeneralUI/BannerImage")
+);
+const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
+const Header = dynamic(() => import("../../components/GeneralUI/Header"));
+const PostCard = dynamic(() => import("../../components/Blog/PostCard"));
 import { getPosts } from "../../graphServices";
 
 export default function Blog({ posts }) {

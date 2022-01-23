@@ -1,11 +1,17 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import Author from "../../components/Blog/Author";
-import Categories from "../../components/Blog/Categories";
-import PostDetail from "../../components/Blog/PostDetail";
-import SimilarPosts from "../../components/Blog/SimilarPosts";
-import Footer from "../../components/GeneralUI/Footer";
-import Header from "../../components/GeneralUI/Header";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
+const Header = dynamic(() => import("../../components/GeneralUI/Header"));
+const Author = dynamic(() => import("../../components/Blog/Author"));
+
+const Categories = dynamic(() => import("../../components/Blog/Categories"));
+const PostDetail = dynamic(() => import("../../components/Blog/PostDetail"));
+const SimilarPosts = dynamic(() =>
+  import("../../components/Blog/SimilarPosts")
+);
+
 import { getPostDetails, getPosts, getSimilarPosts } from "../../graphServices";
 
 const PostDetailPage = ({ post, similarPosts }) => {
@@ -68,7 +74,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const posts = await getPosts();
   return {
-    paths: posts?.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: true,
+    paths: posts?.map(({ node: { slug } }) => ({ params: { slug: slug } })),
+    fallback: false,
   };
 }

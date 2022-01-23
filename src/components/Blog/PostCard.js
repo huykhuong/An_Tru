@@ -14,6 +14,7 @@ const PostCard = ({ post }) => {
             objectFit="cover"
             objectPosition="center"
             src={post.featuredImage.url}
+            alt={post.title}
           />
         </div>
 

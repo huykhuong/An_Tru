@@ -1,9 +1,12 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import Story from "../../components/AboutUs/Story";
-import BannerImage from "../../components/GeneralUI/BannerImage";
-import Footer from "../../components/GeneralUI/Footer";
-import Header from "../../components/GeneralUI/Header";
+import dynamic from "next/dynamic";
+const Story = dynamic(() => import("../../components/AboutUs/Story"));
+const BannerImage = dynamic(() =>
+  import("../../components/GeneralUI/BannerImage")
+);
+const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
+const Header = dynamic(() => import("../../components/GeneralUI/Header"));
 
 export default function About() {
   return (

@@ -1,12 +1,26 @@
 import Head from "next/head";
-import Header from "../../components/GeneralUI/Header";
-import Footer from "../../components/GeneralUI/Footer";
-import DishComponent from "../../components/Menu/DishComponent";
-import FoodQualityBanner from "../../components/Menu/FoodQualityBanner";
-import StaggeredMoveUpComponent from "../../components/FramerMotionReusableComponents/StaggeredMoveUpComponent";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("../../components/GeneralUI/Header"));
+const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
+const DishComponent = dynamic(() =>
+  import("../../components/Menu/DishComponent")
+);
+
+const FoodQualityBanner = dynamic(() =>
+  import("../../components/Menu/FoodQualityBanner")
+);
+const StaggeredMoveUpComponent = dynamic(() =>
+  import(
+    "../../components/FramerMotionReusableComponents/StaggeredMoveUpComponent"
+  )
+);
+const BannerImage = dynamic(() =>
+  import("../../components/GeneralUI/BannerImage")
+);
+const CategoryOptions = dynamic(() =>
+  import("../../components/Menu/CategoryOptions")
+);
 import { Fragment, useState } from "react";
-import BannerImage from "../../components/GeneralUI/BannerImage";
-import CategoryOptions from "../../components/Menu/CategoryOptions";
 
 const KhaiViArray = [
   {

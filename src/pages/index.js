@@ -1,13 +1,20 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import Footer from "../components/GeneralUI/Footer";
-import Header from "../components/GeneralUI/Header";
-import AboutUs from "../components/Homepage/AboutUs";
-import Banner from "../components/Homepage/Banner";
-import ContactInfo from "../components/Homepage/ContactInfo";
-import FullMenuBanner from "../components/Homepage/FullMenuBanner";
-import HighlightedDishes from "../components/Homepage/HighlightedDishes";
-import MealServices from "../components/Homepage/MealServices";
+import dynamic from "next/dynamic";
+const HighlightedDishes = dynamic(() =>
+  import("../components/Homepage/HighlightedDishes")
+);
+const Footer = dynamic(() => import("../components/GeneralUI/Footer"));
+const Header = dynamic(() => import("../components/GeneralUI/Header"));
+const AboutUs = dynamic(() => import("../components/Homepage/AboutUs"));
+const Banner = dynamic(() => import("../components/Homepage/Banner"));
+const ContactInfo = dynamic(() => import("../components/Homepage/ContactInfo"));
+const FullMenuBanner = dynamic(() =>
+  import("../components/Homepage/FullMenuBanner")
+);
+const MealServices = dynamic(() =>
+  import("../components/Homepage/MealServices")
+);
 
 export default function Home() {
   return (

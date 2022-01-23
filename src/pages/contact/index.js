@@ -1,11 +1,18 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import CommentSection from "../../components/ContactUs/CommentSection";
-import ContactInfo from "../../components/ContactUs/ContactInfo";
-import BannerImage from "../../components/GeneralUI/BannerImage";
-import Footer from "../../components/GeneralUI/Footer";
-import Header from "../../components/GeneralUI/Header";
-import Map from "../../components/MapBox/Map";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("../../components/GeneralUI/Header"));
+const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
+const CommentSection = dynamic(() =>
+  import("../../components/ContactUs/CommentSection")
+);
+const ContactInfo = dynamic(() =>
+  import("../../components/ContactUs/ContactInfo")
+);
+const BannerImage = dynamic(() =>
+  import("../../components/GeneralUI/BannerImage")
+);
+const Map = dynamic(() => import("../../components/MapBox/Map"));
 
 export default function Contact() {
   return (
