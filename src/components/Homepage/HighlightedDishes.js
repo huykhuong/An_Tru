@@ -11,7 +11,11 @@ const HighlightedDishes = () => {
 
   return (
     <section className="text-white">
-      <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+      <StaggeredMoveUpComponent
+        keyName="highlighted-title"
+        stylingClasses=""
+        delay={0.2}
+      >
         <div className="text-center mt-20">
           <h1 className="upperHeading">Các</h1>
           <h2 className="lowerHeading">Món nổi bật</h2>
@@ -24,6 +28,7 @@ const HighlightedDishes = () => {
 
       {/* Options */}
       <StaggeredMoveUpComponent
+        keyName="options"
         delay={0.4}
         stylingClasses="flex flex-col mt-5 px-10 mx-auto gap-y-2 md:flex-row md:justify-center md:gap-x-4"
       >
@@ -54,7 +59,11 @@ const HighlightedDishes = () => {
       </StaggeredMoveUpComponent>
 
       {/* Contents correspoding to chosen option */}
-      <StaggeredMoveUpComponent delay={0.5} stylingClasses="mt-14">
+      <StaggeredMoveUpComponent
+        keyName="highlighted-dish"
+        delay={0.5}
+        stylingClasses="mt-14"
+      >
         {/* This is the container div of 3 dishes element */}
         <div className="md:flex md:w-[750px] lg:w-[900px] xl:w-[1000px] mx-auto">
           {/* The Array function is just for temporary use */}

@@ -13,16 +13,19 @@ export default function Blog({ posts }) {
   return (
     <Fragment>
       <Head>
-        <title>Nhà hàng An Trú</title>
+        <title>Blog - Nhà hàng An Trú</title>
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="description"
-          content="Trang Blog của Nhà hàng chay An Trú"
+          name="keywords"
+          content="Blog, blog, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, nhahangchayantru.vn"
         />
+        <meta name="robots" content="noodp,index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Blog" />
+        <meta property="og:description" content />
+        <meta property="og:url" content="https://nhahangchayantru.vn/blog" />
+        {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
+        <meta property="og:site_name" content="Nhà hàng chay An Trú" />
+        <link rel="canonical" href="https://nhahangchayantru.vn/blog" />
       </Head>
 
       <Header />

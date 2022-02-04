@@ -23,6 +23,7 @@ const InfoSection = () => {
 
   return (
     <motion.section
+      key="none"
       initial="initial"
       animate="animate"
       exit="exit"
@@ -48,6 +49,7 @@ const InfoSection = () => {
       <div className="hidden lg:block lg:relative lg:-mt-[90px]">
         {/* Image */}
         <motion.div
+          key="dish-img"
           variants={{
             animate: {
               height: "80vh",
@@ -68,6 +70,7 @@ const InfoSection = () => {
         <div className="hidden absolute lg:flex lg:flex-col lg:gap-y-6 justify-end items-center bg-black top-0 w-full h-full bg-opacity-30 ">
           {/* Price */}
           <motion.h1
+            key="dish-price"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -81,6 +84,7 @@ const InfoSection = () => {
           {/* Vietnamese Title */}
           {title === 0 && (
             <motion.div
+              key="vietnamese-title-div"
               className="menuDetailPageDishTitle"
               animate={{
                 opacity: [1, 0],
@@ -88,6 +92,7 @@ const InfoSection = () => {
               }}
             >
               <motion.h1
+                key="vietnamese-title"
                 variants={{
                   initial: {
                     opacity: 0,
@@ -111,6 +116,7 @@ const InfoSection = () => {
           {/* English Title */}
           {title === 1 && (
             <motion.div
+              key="english-title-div"
               className="menuDetailPageDishTitle"
               animate={{
                 opacity: [1, 0],
@@ -118,6 +124,7 @@ const InfoSection = () => {
               }}
             >
               <motion.h1
+                key="english-title"
                 variants={{
                   initial: {
                     opacity: 0,
@@ -144,6 +151,7 @@ const InfoSection = () => {
       <div className="flex flex-col gap-y-10 mx-auto px-5 py-10 md:max-w-2xl md:py-14 lg:max-w-3xl xl:max-w-4xl lg:items-start lg:gap-y-14">
         {/* Description */}
         <motion.div
+          key="dish-description"
           initial={{ opacity: 0, y: 200 }}
           animate={{
             opacity: 1,
@@ -155,6 +163,7 @@ const InfoSection = () => {
           <p className="menuDetailPageParagraph">{dummyData.description}</p>
         </motion.div>
         <motion.div
+          key="dish-ingredients"
           initial={{ opacity: 0, y: 200 }}
           animate={{
             opacity: 1,
@@ -166,6 +175,7 @@ const InfoSection = () => {
           <p className="menuDetailPageParagraph">Dầu mè, bơ, tỏi</p>
         </motion.div>
         <motion.div
+          key="dish-allergic-warning"
           initial={{ opacity: 0, y: 200 }}
           animate={{
             opacity: 1,

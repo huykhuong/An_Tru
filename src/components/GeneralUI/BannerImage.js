@@ -10,6 +10,7 @@ const BannerImage = ({ upperHeading, lowerHeading, img }) => {
     >
       <div className="absolute h-full w-full bg-black bg-opacity-30 flex flex-col justify-center items-center">
         <motion.h1
+          key={img}
           variants={{
             initial: {
               y: 100,

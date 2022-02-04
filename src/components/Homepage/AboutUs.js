@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const MoveUpAnimation = ({ children, initialPosition, stylingClasses }) => {
+const MoveUpAnimation = ({
+  children,
+  initialPosition,
+  stylingClasses,
+  keyName,
+}) => {
   let variants = {};
   let isMobile;
 
@@ -29,6 +34,7 @@ const MoveUpAnimation = ({ children, initialPosition, stylingClasses }) => {
 
   return (
     <motion.div
+      key={keyName}
       initial="initial"
       whileInView="animate"
       // Tailwind CSS classes as property of this functional component
@@ -57,10 +63,15 @@ const AboutUs = () => {
       <div className="md:z-10 md:pr-[30%]">
         {/*Background */}
         <MoveUpAnimation
+          keyName="about-us-1"
           stylingClasses={`md:bg-primary md:bg-opacity-70 md:-ml-20 md:py-10 max-w-[700px] text-center`}
           initialPosition={30}
         >
-          <MoveUpAnimation stylingClasses={`mt-7`} initialPosition={60}>
+          <MoveUpAnimation
+            keyName="about-us-2"
+            stylingClasses={`mt-7`}
+            initialPosition={60}
+          >
             <h1 className="upperHeading">Về </h1>
             <h2 className="lowerHeading">Chúng tôi</h2>
           </MoveUpAnimation>

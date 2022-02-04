@@ -20,19 +20,27 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <title>Nhà hàng An Trú</title>
+        <title>Nhà hàng chay An Trú</title>
+        <meta name="description" content="Trang chủ nhà hàng chay An Trú" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Homepage of An Tru" />
+          name="keywords"
+          content="An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"
+        />
+        <meta name="robots" content="noodp,index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Nhà hàng chay An Trú" />
+        <meta
+          property="og:description"
+          content="Trang chủ nhà hàng chay An Trú"
+        />
+        <meta property="og:url" content="https://nhahangchayantru.vn" />
+        <meta property="og:site_name" content="Nhà hàng chay An Trú" />
         <link
           rel="preload"
           href="https://images.unsplash.com/photo-1630492782892-74f99406dc59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           as="image"
         />
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script> */}
+        <link rel="canonical" href="https://nhahangchayantru.vn" />
       </Head>
 
       <Header />

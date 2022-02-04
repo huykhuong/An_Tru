@@ -118,16 +118,19 @@ export default function Menu() {
   return (
     <Fragment>
       <Head>
-        <title>Nhà hàng An Trú</title>
+        <title>Menu - Nhà hàng An Trú</title>
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="description"
-          content="Trang Menu của Nhà hàng chay An Trú"
+          name="keywords"
+          content="Menu, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"
         />
+        <meta name="robots" content="noodp,index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Menu" />
+        <meta property="og:description" content />
+        {/* <meta property="og:url" content="https://iron-fever.vn/"/> */}
+        {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
+        <meta property="og:site_name" content="Nhà hàng chay An Trú" />
+        <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
       </Head>
 
       <Header />
@@ -149,7 +152,11 @@ export default function Menu() {
         {/* Dishes section */}
         <section className="bg-white py-10 px-3 h-full md:px-10 lg:pb-40 2xl:px-24">
           {selectedCategory === 0 && (
-            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+            <StaggeredMoveUpComponent
+              keyName="rice"
+              stylingClasses=""
+              delay={0.2}
+            >
               <h2 className="menuPageHeading">Cơm</h2>
 
               {/* List of dishes */}
@@ -169,7 +176,11 @@ export default function Menu() {
           )}
 
           {selectedCategory === 1 && (
-            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+            <StaggeredMoveUpComponent
+              keyName="noodle"
+              stylingClasses=""
+              delay={0.2}
+            >
               <h2 className="menuPageHeading">Mỳ</h2>
 
               {/* List of dishes */}
@@ -189,7 +200,11 @@ export default function Menu() {
           )}
 
           {selectedCategory === 2 && (
-            <StaggeredMoveUpComponent stylingClasses="" delay={0.2}>
+            <StaggeredMoveUpComponent
+              keyName="desserts"
+              stylingClasses=""
+              delay={0.2}
+            >
               <h2 className="menuPageHeading">Tráng Miệng</h2>
 
               {/* List of dishes */}
@@ -213,7 +228,11 @@ export default function Menu() {
 
         {/* Food quality and ingredient section | Laptop/desktop view only */}
         <section className="h-[650px] hidden lg:block bg-transparent relative">
-          <StaggeredMoveUpComponent delay={0.3} stylingClasses="">
+          <StaggeredMoveUpComponent
+            keyName="food-quality-banner"
+            delay={0.3}
+            stylingClasses=""
+          >
             <FoodQualityBanner />
           </StaggeredMoveUpComponent>
         </section>
@@ -222,5 +241,3 @@ export default function Menu() {
     </Fragment>
   );
 }
-
-// bg-[#EBEAE7]

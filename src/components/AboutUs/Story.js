@@ -1,12 +1,15 @@
 import Image from "next/image";
 import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/StaggeredMoveUpComponent";
-import { motion } from "framer-motion";
 
 const Story = () => {
   return (
     <section className="bg-white h-full py-10 lg:px-32 xl:px-44">
-      {/* Beginning story */}
-      <StaggeredMoveUpComponent delay={0.3} stylingClasses="text-center">
+      {/* commencing story */}
+      <StaggeredMoveUpComponent
+        key="commencing story"
+        delay={0.3}
+        stylingClasses="text-center"
+      >
         <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-10">
           Câu chuyện khởi đầu
         </h1>
@@ -25,7 +28,11 @@ const Story = () => {
       </StaggeredMoveUpComponent>
 
       {/* Mission */}
-      <StaggeredMoveUpComponent delay={0.3} stylingClasses="text-center mt-10">
+      <StaggeredMoveUpComponent
+        key="Mission"
+        delay={0.3}
+        stylingClasses="text-center mt-10"
+      >
         <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-20">
           Sứ mệnh & Tầm nhìn
         </h1>
@@ -40,7 +47,11 @@ const Story = () => {
       </StaggeredMoveUpComponent>
 
       {/* Chef and Founders */}
-      <StaggeredMoveUpComponent delay={0.3} stylingClasses="text-center mt-10">
+      <StaggeredMoveUpComponent
+        key="Chef and Founders"
+        delay={0.3}
+        stylingClasses="text-center mt-10"
+      >
         <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-20">
           Các nhà sáng lập
         </h1>

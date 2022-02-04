@@ -69,7 +69,7 @@
     @apply text-[21px] mt-4 md:mt-10;
   }
   .aboutUsPageFounderPosition {
-    @apply text-[16px] opacity-80 mt-5;
+    @apply font-sans text-[16px] opacity-80 mt-5;
   }
   .footerIcons {
     @apply h-6 pr-5 mt-1;

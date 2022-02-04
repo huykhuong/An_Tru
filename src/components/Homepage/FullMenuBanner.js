@@ -9,7 +9,11 @@ const FullMenuBanner = () => {
       <div className="bg-[url('/photo-1541921671-016ccc70f7cc.webp')] min-h-[288px] lg:min-h-[380px] lg:bg-fixed bg-center bg-no-repeat bg-cover relative"></div>
       {/* Overlay Contents */}
       <div className="absolute top-0 w-full h-full bg-black bg-opacity-30 flex flex-col justify-evenly items-start px-7 md:px-10 lg:px-16 xl:px-40">
-        <StaggeredMoveUpComponent delay={0.2} stylingClasses="">
+        <StaggeredMoveUpComponent
+          keyName="overlay-contents"
+          delay={0.2}
+          stylingClasses=""
+        >
           <h1 className="upperHeading">Khám phá</h1>
           <h3 className="lowerHeading">Menu của chúng tôi</h3>
 
@@ -20,7 +24,11 @@ const FullMenuBanner = () => {
           </p>
         </StaggeredMoveUpComponent>
 
-        <StaggeredMoveUpComponent delay={0.4} stylingClasses="">
+        <StaggeredMoveUpComponent
+          keyName="full-menu-button"
+          delay={0.4}
+          stylingClasses=""
+        >
           <button
             onClick={() => router.push("/menu")}
             className="fullMenuButton"

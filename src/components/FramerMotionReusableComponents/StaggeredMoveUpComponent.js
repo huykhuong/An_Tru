@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-const StaggeredMoveUpComponent = ({ children, delay, stylingClasses }) => {
+const StaggeredMoveUpComponent = ({
+  children,
+  delay,
+  stylingClasses,
+  keyName,
+}) => {
   let variants = {};
   let isMobile;
 
@@ -28,6 +33,7 @@ const StaggeredMoveUpComponent = ({ children, delay, stylingClasses }) => {
 
   return (
     <motion.div
+      key={keyName}
       className={stylingClasses}
       initial="initial"
       whileInView="animate"

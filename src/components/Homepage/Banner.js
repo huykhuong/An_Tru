@@ -71,6 +71,7 @@ const Banner = () => {
                 {/* Overlay div */}
                 <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
                   <motion.div
+                    key="overlay"
                     variants={{
                       initial: {
                         y: 100,

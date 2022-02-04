@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { Router } from "next/router";
 import "../styles/globals.css";
 import ProgressBar from "@badrap/bar-of-progress";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const progress = new ProgressBar({
@@ -17,6 +18,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AnimatePresence exitBeforeEnter>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <div className="h-full bg-black-background box-border">
         <Component {...pageProps} />
       </div>

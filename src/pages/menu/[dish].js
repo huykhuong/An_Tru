@@ -12,16 +12,20 @@ const DishDetail = () => {
   return (
     <Fragment>
       <Head>
-        <title>Nhà hàng An Trú</title>
+        {/* The title needs to be renamed according to the name of the dish */}
+        {/* <title>Menu - Nhà hàng An Trú</title> */}
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        ></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="description"
-          content="Trang thông tin chi tiết món ăn của Nhà hàng chay An Trú"
+          name="keywords"
+          content="Menu, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"
         />
+        <meta name="robots" content="noodp,index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Menu" />
+        <meta property="og:description" content />
+        {/* <meta property="og:url" content="https://iron-fever.vn/"/> */}
+        {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
+        <meta property="og:site_name" content="Nhà hàng chay An Trú" />
+        <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
       </Head>
 
       <Header />

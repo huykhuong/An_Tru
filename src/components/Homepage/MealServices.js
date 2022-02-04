@@ -18,7 +18,11 @@ const MealServices = () => {
         {/* Meals Section */}
         <div className="font-prata mt-10 flex flex-col gap-y-20 md:flex-row md:gap-x-5 md:max-w-3xl lg:max-w-5xl">
           {/* First meal */}
-          <StaggeredMoveUpComponent delay={0.2} stylingClasses="space-y-4">
+          <StaggeredMoveUpComponent
+            keyName="first-meal"
+            delay={0.2}
+            stylingClasses="space-y-4"
+          >
             <div className="mx-auto relative h-28 w-28">
               <Image
                 objectFit="cover"
@@ -35,7 +39,11 @@ const MealServices = () => {
           </StaggeredMoveUpComponent>
 
           {/* Second Meal */}
-          <StaggeredMoveUpComponent delay={0.4} stylingClasses="space-y-4">
+          <StaggeredMoveUpComponent
+            keyName="second-meal"
+            delay={0.4}
+            stylingClasses="space-y-4"
+          >
             <div className="mx-auto relative h-28 w-28">
               <Image
                 objectFit="cover"
@@ -52,7 +60,11 @@ const MealServices = () => {
           </StaggeredMoveUpComponent>
 
           {/* Third Meal */}
-          <StaggeredMoveUpComponent delay={0.6} stylingClasses="space-y-4">
+          <StaggeredMoveUpComponent
+            keyName="third-meal"
+            delay={0.6}
+            stylingClasses="space-y-4"
+          >
             <div className="mx-auto relative h-28 w-28">
               <Image
                 objectFit="cover"
