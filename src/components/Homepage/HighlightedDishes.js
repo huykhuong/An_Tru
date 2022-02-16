@@ -7,7 +7,7 @@ const HighlightedDishes = () => {
 
   const selectedStyleClass = "bg-lighter_green !text-white";
   const generalOptionStyleClass =
-    "py-2 px-3 text-lg cursor-pointer border-b-2 border-lighter_green text-lighter_green hover:bg-lighter_green hover:text-black transition duration-500 ease-out";
+    "py-2 px-3 text-lg cursor-pointer text-lighter_green hover:bg-lighter_green hover:text-black transition duration-500 ease-out";
 
   return (
     <section className="text-white">
@@ -34,25 +34,22 @@ const HighlightedDishes = () => {
       >
         <div
           onClick={() => setSelectedOption(0)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 0 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 0 && selectedStyleClass
+            }`}
         >
           Main Dish
         </div>
         <div
           onClick={() => setSelectedOption(1)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 1 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 1 && selectedStyleClass
+            }`}
         >
           Drinks
         </div>
         <div
           onClick={() => setSelectedOption(2)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 2 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 2 && selectedStyleClass
+            }`}
         >
           Desserts
         </div>

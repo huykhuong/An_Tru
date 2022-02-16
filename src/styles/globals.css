@@ -54,7 +54,7 @@
     @apply paragraph text-black opacity-60 font-normal font-josephin;
   }
   .menuDetailPageDishTitle {
-    @apply text-6xl text-center text-white xl:text-7xl absolute top-[600px];
+    @apply text-6xl text-center text-white xl:text-7xl ;
   }
   .menuPageUnselectedCategory {
     @apply cursor-pointer font-josephin text-lighter_green border border-lighter_green px-3 py-1 rounded-full;

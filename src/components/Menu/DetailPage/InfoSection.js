@@ -17,7 +17,6 @@ const InfoSection = () => {
     const interval = setInterval(() => {
       setTitle(title === 1 ? title - 1 : title + 1);
     }, 6000);
-    console.log(title);
     return () => clearInterval(interval);
   }, [title]);
 
@@ -67,7 +66,7 @@ const InfoSection = () => {
         ></motion.div>
 
         {/* Overlay div for large screen that has Price and Title  */}
-        <div className="hidden absolute lg:flex lg:flex-col lg:gap-y-6 justify-end items-center bg-black top-0 w-full h-full bg-opacity-30 ">
+        <div className="hidden absolute lg:flex lg:flex-col lg:gap-y-5 lg:pb-10 justify-end items-center bg-black top-0 w-full h-full bg-opacity-30">
           {/* Price */}
           <motion.h1
             key="dish-price"
@@ -76,7 +75,7 @@ const InfoSection = () => {
               opacity: 1,
               transition: { duration: 0.6, delay: 1 },
             }}
-            className="lg:mb-10 lg:text-[20px] lg:text-primary bg-white px-8 py-1 absolute top-[520px] h-[32px]"
+            className="lg:mb-10 lg:text-[20px] lg:text-primary bg-white px-8 py-1 h-[32px]"
           >
             {dummyData.price}
           </motion.h1>
@@ -101,7 +100,6 @@ const InfoSection = () => {
                     opacity: 1,
                     transition: {
                       duration: 1,
-                      ease: [0.6, -0.05, 0.01, 0.99],
                     },
                   },
                 }}
@@ -133,7 +131,6 @@ const InfoSection = () => {
                     opacity: 1,
                     transition: {
                       duration: 1,
-                      ease: [0.6, -0.05, 0.01, 0.99],
                     },
                   },
                 }}
