@@ -57,7 +57,7 @@ const Story = () => {
         </h1>
 
         {/* Overall div of both head chef and founder */}
-        <div className="md:w-[600px] xl:flex xl:gap-x-5 xl:w-[710px] mx-auto">
+        <div className="md:w-[600px] xl:flex xl:gap-x-5 xl:w-[910px] mx-auto">
           {/* Head chef */}
           <div className="text-sm text-black leading-7 mt-5 px-9 md:text-sm">
             <div className="relative h-44 w-44 rounded-full overflow-hidden mx-auto mt-10">
@@ -86,6 +86,24 @@ const Story = () => {
               />
             </div>
             <h2 className="aboutUsPageFounderName">Nguyễn Minh Đạt</h2>
+            <h2 className="aboutUsPageFounderPosition">ĐỒNG SÁNG LẬP</h2>
+            <p className="opacity-60 font-sans mt-5 md:leading-8 lg:text-[16px] xl:text-[17px]">
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.
+            </p>
+          </div>
+          {/* Founder */}
+          <div className="text-sm text-black leading-7 mt-5 px-9 md:text-sm">
+            <div className="relative h-44 w-44 rounded-full overflow-hidden mx-auto mt-10">
+              <Image
+                layout="fill"
+                objectFit="cover"
+                src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.6435-9/135213847_3868278449851856_8844246534897896694_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=IIqJmF3uuYwAX9LPHmk&_nc_ht=scontent.fsgn2-2.fna&oh=00_AT-JJ6tNSQY-J7C1yA74N6Cq7owaCsu507V8Ax_0by7ZtA&oe=620108EE"
+              />
+            </div>
+            <h2 className="aboutUsPageFounderName">Khương Chấn Huy</h2>
             <h2 className="aboutUsPageFounderPosition">ĐỒNG SÁNG LẬP</h2>
             <p className="opacity-60 font-sans mt-5 md:leading-8 lg:text-[16px] xl:text-[17px]">
               Far far away, behind the word mountains, far from the countries

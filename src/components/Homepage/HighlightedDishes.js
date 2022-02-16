@@ -5,9 +5,9 @@ import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/Staggere
 const HighlightedDishes = () => {
   const [selectedOption, setSelectedOption] = useState(0);
 
-  const selectedStyleClass = "bg-secondary !text-black";
+  const selectedStyleClass = "bg-lighter_green !text-white";
   const generalOptionStyleClass =
-    "py-2 px-3 text-lg cursor-pointer border-b-2 border-secondary text-secondary hover:bg-secondary hover:text-black transition duration-500 ease-out";
+    "py-2 px-3 text-lg cursor-pointer border-b-2 border-lighter_green text-lighter_green hover:bg-lighter_green hover:text-black transition duration-500 ease-out";
 
   return (
     <section className="text-white">
