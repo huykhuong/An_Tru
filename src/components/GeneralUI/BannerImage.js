@@ -6,7 +6,7 @@ const BannerImage = ({ upperHeading, lowerHeading, img }) => {
       style={{
         backgroundImage: `url(${img})`,
       }}
-      className="min-h-[1000px] lg:bg-fixed bg-center bg-no-repeat bg-cover relative"
+      className="h-screen lg:bg-fixed bg-center bg-no-repeat bg-cover relative"
     >
       <div className="absolute h-full w-full bg-black bg-opacity-30 flex flex-col justify-center items-center">
         <motion.h1
@@ -31,8 +31,8 @@ const BannerImage = ({ upperHeading, lowerHeading, img }) => {
           className="text-3xl lg:text-4xl"
         >
           <div className="text-center">
-            <h1 className="upperHeading">{upperHeading}</h1>
-            <h1 className="lowerHeading">{lowerHeading}</h1>
+            <h1 className="upperHeading text-bright_yellow">{upperHeading}</h1>
+            <h1 className="lowerHeading text-white">{lowerHeading}</h1>
           </div>
         </motion.h1>
       </div>

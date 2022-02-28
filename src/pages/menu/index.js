@@ -118,7 +118,7 @@ export default function Menu() {
   return (
     <Fragment>
       <Head>
-        <title>Menu - Nhà hàng An Trú</title>
+        <title>Menu - Nhà hàng chay An Trú</title>
         <meta
           name="keywords"
           content="Menu, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"

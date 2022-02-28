@@ -3,9 +3,9 @@ import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/Staggere
 
 const MealServices = () => {
   return (
-    <section className="bg-[#FFFBF5]">
+    <section className="bg-[#FFFBF5] md:bg-transparent">
       {/* Meals */}
-      <div className="flex flex-col items-center px-20 py-10 w-full text-black text-center lg:mt-20 lg:mb-28">
+      <div className="flex flex-col items-center px-20 py-10 w-full text-black text-center md:mt-20 lg:mb-28">
         <h2 className="lowerHeading">Các Bữa Ăn</h2>
         <p className="paragraph lg:max-w-4xl">
           Aenean sodales dictum augue, in faucibus nisi sollicitudin eu. Nulla

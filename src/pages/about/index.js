@@ -12,7 +12,7 @@ export default function About() {
   return (
     <Fragment>
       <Head>
-        <title>Về chúng tôi - Nhà hàng An Trú</title>
+        <title>Về chúng tôi - Nhà hàng chay An Trú</title>
         <meta
           name="keywords"
           content="Về chúng tôi, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, nhahangchayantru.vn"

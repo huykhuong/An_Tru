@@ -6,10 +6,10 @@
 
 @layer components {
   .paragraph {
-    @apply text-[#596672] text-[16px] leading-7 font-open_sans;
+    @apply text-[#596672] text-[16px] leading-8 font-open_sans;
   }
   .upperHeading {
-    @apply font-secondary text-lighter_green text-3xl md:text-4xl;
+    @apply font-secondary text-bright_yellow text-3xl md:text-4xl;
   }
   .lowerHeading {
     @apply font-prata text-[#001D38] text-3xl md:text-4xl mb-10;
@@ -18,7 +18,7 @@
     @apply hover:text-bright_yellow transition-all duration-300 ease-in-out font-open_sans;
   }
   .footerHeading {
-    @apply font-prata text-white text-[18px];
+    @apply font-prata text-secondary text-[18px];
   }
   .menuDetailHeading {
     @apply font-prata  font-semibold text-primary text-[21px] mb-5 lg:text-[23px];
@@ -45,7 +45,7 @@
     @apply font-medium px-3 py-2 text-xs md:px-4 md:py-3 md:text-sm text-secondary border border-secondary hover:bg-secondary hover:text-white transition duration-200 ease-out;
   }
   .menuPageHeading {
-    @apply text-primary text-2xl font-bold;
+    @apply text-[#001D38] text-2xl font-bold;
   }
   .menuDetailPageParagraph {
     @apply paragraph text-black opacity-60 font-normal font-josephin;
@@ -60,7 +60,7 @@
     @apply cursor-pointer font-josephin text-white bg-lighter_green border border-lighter_green px-3 py-1 rounded-full;
   }
   .aboutUsPageParagraph {
-    @apply text-sm opacity-60 font-sans text-black leading-7 mt-5 px-9 md:text-sm md:px-14 md:leading-8 md:w-[600px] lg:w-[700px] lg:text-[16px] xl:text-[17px] mx-auto;
+    @apply text-sm opacity-60 font-open_sans text-black leading-7 mt-5 px-9 md:text-sm md:px-14 md:leading-8 md:w-[600px] lg:w-[700px] lg:text-[16px] xl:text-[17px] mx-auto;
   }
   .aboutUsPageFounderName {
     @apply text-[21px] mt-4 md:mt-10;

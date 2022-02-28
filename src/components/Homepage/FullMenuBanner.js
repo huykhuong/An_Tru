@@ -1,22 +1,22 @@
 import { useRouter } from "next/router";
 import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/StaggeredMoveUpComponent";
-import Image from "next/image";
 
 const FullMenuBanner = () => {
   const router = useRouter();
   return (
-    <section className="mt-20 mb-10 max-w-[80%] mx-auto">
+    <section className="mt-20 mb-10 max-w-[80%] mx-auto lg:flex lg:flex-row-reverse justify-center items-center">
       {/* Background Image */}
       {/* <div className="bg-[url('/photo-1541921671-016ccc70f7cc.webp')] min-h-[288px] lg:min-h-[380px] lg:bg-fixed bg-center bg-no-repeat bg-cover relative"></div> */}
 
       <img
+        className='max-h-[640px] mx-auto'
         src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=706&q=80"
         alt="full-menu"
         loading="lazy"
       />
 
       {/*Contents */}
-      <div className="flex flex-col justify-evenly items-start mt-10 md:px-10 lg:px-16 xl:px-40">
+      <div className="flex flex-col justify-evenly items-start mt-10 lg:mr-40">
         <StaggeredMoveUpComponent
           keyName="overlay-contents"
           delay={0.2}

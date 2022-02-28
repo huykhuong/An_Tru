@@ -10,7 +10,7 @@ const HighlightedDishes = () => {
     "py-2 px-3 text-lg cursor-pointer text-lighter_green hover:bg-lighter_green hover:text-black transition-all duration-200 ease-linear";
 
   return (
-    <section className="text-white mt-24">
+    <section className="text-white mt-24 mb-20">
       <StaggeredMoveUpComponent
         keyName="highlighted-title"
         stylingClasses=""
@@ -33,25 +33,22 @@ const HighlightedDishes = () => {
       >
         <div
           onClick={() => setSelectedOption(0)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 0 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 0 && selectedStyleClass
+            }`}
         >
           Main Dish
         </div>
         <div
           onClick={() => setSelectedOption(1)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 1 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 1 && selectedStyleClass
+            }`}
         >
           Drinks
         </div>
         <div
           onClick={() => setSelectedOption(2)}
-          className={`${generalOptionStyleClass} ${
-            selectedOption === 2 && selectedStyleClass
-          }`}
+          className={`${generalOptionStyleClass} ${selectedOption === 2 && selectedStyleClass
+            }`}
         >
           Desserts
         </div>

@@ -10,7 +10,7 @@ const Story = () => {
         delay={0.3}
         stylingClasses="text-center"
       >
-        <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-10">
+        <h1 className="lowerHeading">
           Câu chuyện khởi đầu
         </h1>
         <div className="aboutUsPageParagraph">
@@ -33,7 +33,7 @@ const Story = () => {
         delay={0.3}
         stylingClasses="text-center mt-10"
       >
-        <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-20">
+        <h1 className="lowerHeading">
           Sứ mệnh & Tầm nhìn
         </h1>
         <div className="aboutUsPageParagraph">
@@ -50,9 +50,9 @@ const Story = () => {
       <StaggeredMoveUpComponent
         key="Chef and Founders"
         delay={0.3}
-        stylingClasses="text-center mt-10"
+        stylingClasses="text-center mt-10 mb-20"
       >
-        <h1 className="text-primary text-2xl font-bold px-16 leading-8 lg:mt-20">
+        <h1 className="lowerHeading">
           Các nhà sáng lập
         </h1>
 

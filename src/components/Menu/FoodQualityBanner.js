@@ -3,11 +3,11 @@ const FoodQualityBanner = () => {
     <section className="absolute -top-16 w-full px-16 xl:px-52 2xl:px-80">
       {/* First Row */}
       <div className="flex shadow-xl">
-        <div className=" flex flex-col justify-center align-middle px-10 bg-white max-h-[300px] max-w-[300px] text-center gap-y-6">
+        <div className="flex flex-col justify-center align-middle px-10 bg-white max-h-[300px] max-w-[300px] text-center gap-y-6">
           <h1 className="text-black font-prata text-2xl w-40 mx-auto">
             Thực phẩm chất lượng
           </h1>
-          <p className="paragraph text-black !font-josephin !opacity-80">
+          <p className="paragraph">
             A heaping mountain of rings, handmade with Panko breading and
             shredded coconut flakes.
           </p>
@@ -22,7 +22,7 @@ const FoodQualityBanner = () => {
           <h1 className="text-black font-prata text-2xl w-40 mx-auto">
             Nguyên liệu sạch
           </h1>
-          <p className="paragraph text-black !font-josephin !opacity-80">
+          <p className="paragraph">
             A heaping mountain of rings, handmade with Panko breading and
             shredded coconut flakes.
           </p>

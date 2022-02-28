@@ -13,7 +13,7 @@ const Footer = () => {
       {/* The restaurant */}
       <div className="md:flex-1/3">
         <h1 className="footerHeading">Nhà hàng chay An Trú</h1>
-        <p className="paragraph mt-4">
+        <p className="paragraph mt-4 text-white opacity-80">
           Cảm ơn quý khách đã dành sự quan tâm đến chúng tôi
         </p>
       </div>
@@ -23,11 +23,11 @@ const Footer = () => {
         <div>
           <div>
             <h1 className="footerHeading">Giờ hoạt động 1</h1>
-            <p className="paragraph mt-4">Từ 10h sáng - 2h chiều</p>
+            <p className="paragraph mt-4 text-white opacity-80">Từ 10h sáng - 2h chiều</p>
           </div>
           <div>
             <h1 className="footerHeading mt-4">Giờ hoạt động 2</h1>
-            <p className="paragraph mt-4">Từ 5h chiều - 9h tối</p>
+            <p className="paragraph mt-4 text-white opacity-80">Từ 5h chiều - 9h tối</p>
           </div>
         </div>
         {/* Social Media Links */}
@@ -41,26 +41,26 @@ const Footer = () => {
       </div>
       {/* Brief contact info */}
       <div className="md:flex-1/3">
-        <h1 className="footerHeading">Bạn có câu hỏi cho chúng tôi?</h1>
+        <h1 className="footerHeading">Quý khách có câu hỏi cho chúng tôi?</h1>
         <div className="space-y-5 pt-5">
           <div className="flex">
             <PhoneIcon className="footerIcons" />
             <div>
-              <p className="paragraph">000 (123) 456 7890</p>
+              <p className="paragraph text-white opacity-80">000 (123) 456 7890</p>
             </div>
           </div>
 
           <div className="flex">
             <LocationMarkerIcon className="footerIcons" />
             <div>
-              <p className="paragraph">198 West 21th Street</p>
+              <p className="paragraph text-white opacity-80">198 West 21th Street</p>
             </div>
           </div>
 
           <div className="flex">
             <MailIcon className="footerIcons" />
             <div>
-              <p className="paragraph">nhahangantru@gmail.com</p>
+              <p className="paragraph text-white opacity-80">nhahangantru@gmail.com</p>
             </div>
           </div>
         </div>
