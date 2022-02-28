@@ -3,20 +3,18 @@ import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/Staggere
 
 const MealServices = () => {
   return (
-    <section>
+    <section className="bg-[#FFFBF5]">
       {/* Meals */}
-      <div className="flex flex-col items-center px-20 py-10 bg-white w-full text-black text-center">
-        <h1 className="text-5xl font-secondary">
-          <span className="text-bright_yellow">Các</span> bữa ăn
-        </h1>
-        <p className="mealServiceParagraph lg:max-w-4xl">
+      <div className="flex flex-col items-center px-20 py-10 w-full text-black text-center lg:mt-20 lg:mb-28">
+        <h2 className="lowerHeading">Các Bữa Ăn</h2>
+        <p className="paragraph lg:max-w-4xl">
           Aenean sodales dictum augue, in faucibus nisi sollicitudin eu. Nulla
           semper arcu vel diam auctor. condimentum. Nam molestie sem eu quam
           fermentum a tempus nisi aliquet.
         </p>
 
         {/* Meals Section */}
-        <div className="font-prata mt-10 flex flex-col gap-y-20 md:flex-row md:gap-x-5 md:max-w-3xl lg:max-w-5xl">
+        <div className="font-prata mt-10 flex flex-col gap-y-20 md:flex-row md:gap-x-20 md:max-w-3xl lg:max-w-5xl">
           {/* First meal */}
           <StaggeredMoveUpComponent
             keyName="first-meal"
@@ -32,7 +30,7 @@ const MealServices = () => {
               />
             </div>
             <h2 className="mealServiceHeading">Bữa sáng</h2>
-            <p className="mealServiceParagraph">
+            <p className="paragraph">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>
@@ -53,7 +51,7 @@ const MealServices = () => {
               />
             </div>
             <h2 className="mealServiceHeading">Bữa trưa</h2>
-            <p className="mealServiceParagraph">
+            <p className="paragraph">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>
@@ -74,7 +72,7 @@ const MealServices = () => {
               />
             </div>
             <h2 className="mealServiceHeading">Bữa tối</h2>
-            <p className="mealServiceParagraph">
+            <p className="paragraph">
               Lorem ipsum dolor sit amet, tetur piscing elit. Suspendisse smod
               congue bibendum.
             </p>

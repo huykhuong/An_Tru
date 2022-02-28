@@ -3,7 +3,7 @@ import StaggeredMoveUpComponent from "../FramerMotionReusableComponents/Staggere
 
 const ContactInfo = () => {
   return (
-    <section className="flex flex-col py-10 px-2 gap-y-5 text-white lg:flex-row lg:max-w-screen-xl lg:pl-10">
+    <section className="flex flex-col py-10 px-2 gap-y-5 lg:flex-row lg:max-w-screen-xl lg:pl-10 lg:mx-auto lg:my-10">
       <StaggeredMoveUpComponent
         keyName="contact-info-1"
         delay={0.1}
@@ -51,8 +51,8 @@ const ContactInfo = () => {
         </svg>
 
         <div>
-          <p className="font-josephin">Open Monday-Friday</p>
-          <p className="paragraph">8:00am - 9:00pm</p>
+          <p className="font-josephin">Mở cửa thứ 3 - CN</p>
+          <p className="paragraph">10h sáng - 9h tối</p>
         </div>
       </StaggeredMoveUpComponent>
     </section>

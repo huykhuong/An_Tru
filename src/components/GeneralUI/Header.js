@@ -29,9 +29,9 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-primary text-white font-josephin font-light sticky top-0 z-30 ${
+      className={`bg-primary text-white font-prata sticky top-0 z-30 ${
         navBarScroll
-          ? "lg:animate-headerScrollDown sticky top-0"
+          ? "lg:animate-headerScrollDown sticky top-0 shadow-2xl"
           : "lg:relative lg:!bg-transparent lg:border-b lg:border-opacity-20"
       }`}
     >
@@ -110,7 +110,7 @@ const Header = () => {
       <div
         className={`${
           openMobileNav ? "h-[260px] pt-5 pb-0" : "h-0"
-        } px-[2rem] overflow-hidden md:px-16 bg-black text-white transition-all duration-300 ease-in-out space-y-10 font-bold lg:hidden 
+        } px-[2rem] overflow-hidden text-white transition-all duration-300 ease-in-out space-y-10 font-sans md:px-16 lg:hidden 
       `}
       >
         <div

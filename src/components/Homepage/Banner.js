@@ -47,7 +47,7 @@ const Banner = () => {
   }, [current]);
 
   return (
-    <section className="relative -mt-[64px] lg:-mt-[88px] h-screen flex justify-center items-center">
+    <section className="relative -mt-[64px] lg:-mt-[88px] w-full h-screen flex justify-center items-center">
       <ArrowNarrowLeftIcon
         className="bannerNavigationButton left-20"
         onClick={prevSlide}
@@ -58,51 +58,47 @@ const Banner = () => {
       />
       {SliderData?.map((slide, index) => {
         return (
-          <div
-            className={
-              index === current
-                ? "opacity-1 transition-all duration-700 ease-in"
-                : "opacity-0 transition-all duration-700 ease-out"
-            }
-            key={index}
-          >
-            {index === current && (
-              <div>
-                {/* Overlay div */}
-                <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
-                  <motion.div
-                    key="overlay"
-                    variants={{
-                      initial: {
-                        y: 100,
-                        opacity: 0,
+          index === current && (
+            <div className="relative w-full h-screen">
+              {/* Overlay div */}
+              <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
+                <motion.div
+                  key="overlay"
+                  variants={{
+                    initial: {
+                      y: 100,
+                      opacity: 0,
+                    },
+                    animate: {
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        duration: 1,
+                        ease: [0.6, -0.05, 0.01, 0.99],
                       },
-                      animate: {
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                          duration: 0.8,
-                          ease: [0.6, -0.05, 0.01, 0.99],
-                        },
-                      },
-                    }}
-                    initial="initial"
-                    whileInView="animate"
-                  >
-                    <h1 className="upperHeading">{slide.title}</h1>
-                    <h1 className="lowerHeading">{slide.description}</h1>
-                  </motion.div>
-                </div>
-                <Image
-                  objectPosition="center"
-                  objectFit="cover"
-                  layout="fill"
-                  src={slide.image}
-                  alt={slide.title}
-                />
+                    },
+                  }}
+                  initial="initial"
+                  whileInView="animate"
+                >
+                  <h1 className="upperHeading text-bright_yellow">
+                    {slide.title}
+                  </h1>
+                  <h1 className="lowerHeading text-white">
+                    {slide.description}
+                  </h1>
+                </motion.div>
               </div>
-            )}
-          </div>
+              <Image
+                priority="true"
+                objectPosition="center"
+                objectFit="cover"
+                layout="fill"
+                src={slide.image}
+                alt={slide.title}
+              />
+            </div>
+          )
         );
       })}
     </section>

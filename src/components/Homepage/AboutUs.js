@@ -49,7 +49,7 @@ const MoveUpAnimation = ({
 
 const AboutUs = () => {
   return (
-    <div className="text-white pb-10 md:pb-0 md:grid grid-cols-2 place-items-center">
+    <div className="text-white pb-10 md:pb-0 md:grid grid-cols-2 place-items-center md:bg-[#FFFBF5]">
       {/* Banner */}
       <div className="relative h-[300px] w-full md:h-[600px] xl:h-[650px]">
         <Image
@@ -60,20 +60,20 @@ const AboutUs = () => {
         />
       </div>
       {/* Text Content */}
-      <div className="md:z-10 md:pr-[30%]">
+      <div className="md:z-10">
         {/*Background */}
         <MoveUpAnimation
           keyName="about-us-1"
-          stylingClasses={`md:bg-primary md:bg-opacity-70 md:-ml-20 md:py-10 max-w-[700px] text-center`}
+          stylingClasses={`md:py-10 max-w-[700px] text-center`}
           initialPosition={30}
         >
           <MoveUpAnimation
             keyName="about-us-2"
-            stylingClasses={`mt-7`}
+            stylingClasses={`mt-10`}
             initialPosition={60}
           >
-            <h1 className="upperHeading">Về </h1>
-            <h2 className="lowerHeading">Chúng tôi</h2>
+            {/* <h1 className="upperHeading">Về </h1> */}
+            <h2 className="lowerHeading">Về Chúng Tôi</h2>
           </MoveUpAnimation>
           <div className="paragraph py-5 px-10">
             Quisque volutpat pharetra felis, eu cursus lorem molestie vitae ulla

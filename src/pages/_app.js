@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="h-full bg-black-background box-border">
+      <div className="h-full box-border">
         <Component {...pageProps} />
       </div>
     </AnimatePresence>
