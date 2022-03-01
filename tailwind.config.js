@@ -41,10 +41,18 @@ module.exports = {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-100%)", visibility: "hidden" },
         },
+        crossFade: {
+          "17%": { opacity: 1 },
+          "25%": { opacity: 0 },
+          "92%": { opacity: 0 },
+        },
       },
       animation: {
         headerScrollDown: "headerScrollDown 0.2s linear",
         headerScrollUp: "headerScrollUp 0.5s linear",
+        image3: "crossFade 6s 1s infinite",
+        image2: "crossFade 6s 3s infinite",
+        image1: "crossFade 6s 5s infinite",
       },
     },
   },

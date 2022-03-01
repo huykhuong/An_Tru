@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <Fragment>
       <Head>
-        <title>Liên hệ - Nhà hàng An Trú</title>
+        <title>Liên hệ - Nhà hàng chay An Trú</title>
         <meta
           name="keywords"
           content="Liên hệ, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, nhahangchayantru.vn"
@@ -35,7 +35,7 @@ export default function Contact() {
 
       <Header />
 
-      <main className="lg:-mt-[88px] text-white font-prata">
+      <main className="lg:-mt-[88px] font-prata">
         <BannerImage
           upperHeading="Liên hệ"
           lowerHeading="Đến chúng tôi"
@@ -43,10 +43,10 @@ export default function Contact() {
         />
         <div className="lg:flex lg:justify-center lg:items-start lg:py-16">
           <ContactInfo />
-          <CommentSection />
+          {/* <CommentSection /> */}
         </div>
         <div className="w-full h-[370px] px-5 mt-10 mb-32 md:px-16 lg:h-[600px] lg:max-w-[1034.094px] mx-auto">
-          <h1 className="text-lg mb-5 xl:text-2xl">Vị trí của chúng tôi</h1>
+          <h1 className="lowerHeading">Vị trí của chúng tôi</h1>
           <Map />
         </div>
       </main>

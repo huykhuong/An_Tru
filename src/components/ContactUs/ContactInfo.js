@@ -2,7 +2,7 @@ const ContactInfo = () => {
   return (
     // Contact Info
     <section className="px-5 py-10 flex flex-col gap-y-5 md:px-16">
-      <h1 className="text-lg xl:text-2xl">Thông tin liên hệ</h1>
+      <h1 className="lowerHeading">Thông tin liên hệ</h1>
       <h2 className="font-josephin text-[16px]">
         Địa chỉ:<>&nbsp;</>
         <span className="contactInfo">
@@ -11,7 +11,7 @@ const ContactInfo = () => {
       </h2>
       <h2 className="font-josephin text-[16px]">
         Website:<>&nbsp;</>
-        <span className="contactInfo">nhahangantru.com</span>
+        <span className="contactInfo">https://nhahangchayantru.vn</span>
       </h2>
       <h2 className="font-josephin text-[16px]">
         Điện thoại:<>&nbsp;</>

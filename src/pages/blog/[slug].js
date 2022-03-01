@@ -4,9 +4,6 @@ import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("../../components/GeneralUI/Footer"));
 const Header = dynamic(() => import("../../components/GeneralUI/Header"));
-const Author = dynamic(() => import("../../components/Blog/Author"));
-
-const Categories = dynamic(() => import("../../components/Blog/Categories"));
 const PostDetail = dynamic(() => import("../../components/Blog/PostDetail"));
 const SimilarPosts = dynamic(() =>
   import("../../components/Blog/SimilarPosts")
@@ -36,12 +33,10 @@ const PostDetailPage = ({ post, similarPosts }) => {
         {/* Post Detail and Author div */}
         <div className="lg:col-span-3">
           <PostDetail post={post} />
-          <Categories categories={post.categories} />
-          <Author author={post.author} />
         </div>
         {/* Recent Posts and Category tags div */}
         <div className="my-20 lg:col-span-1 lg:flex lg:flex-col lg:mt-8">
-          <h1 className="text-white text-2xl font-semibold px-4 md:px-16 lg:px-0">
+          <h1 className="text-[#001D38] text-2xl font-semibold px-4 md:px-16 lg:px-0">
             Bài viết tương tự
           </h1>
           <SimilarPosts similarPosts={similarPosts} />

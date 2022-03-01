@@ -26,7 +26,9 @@ const PostCard = ({ post }) => {
           </p>
         </div>
         {/* Title */}
-        <h1 className="font-josephin text-xl mb-4">{post.title}</h1>
+        <h1 className="font-prata text-[#001D38] text-2xl mb-4">
+          {post.title}
+        </h1>
         {/* Exceprt */}
         <p className="paragraph">{post.excerpt}</p>
       </div>

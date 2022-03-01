@@ -11,7 +11,7 @@ const SimilarPosts = ({ similarPosts }) => {
         <Link href={`/blog/${post.slug}`} key={index}>
           <div className="flex">
             {/* Image div */}
-            <div className="relative flex-shrink-0">
+            <div className="relative flex-shrink-0 flex items-center">
               <Image
                 alt={post.title}
                 className="rounded-md"
@@ -25,18 +25,18 @@ const SimilarPosts = ({ similarPosts }) => {
             </div>
             {/* Content div */}
             <div className="ml-5">
-              <h1 className="text-white text-sm font-bold opacity-70 mb-5">
+              <h1 className="text-[#001D38] text-sm font-bold opacity-70 mb-5">
                 {post.title}
               </h1>
               <div className="flex flex-wrap gap-x-2">
                 <div className="flex items-center gap-x-1">
-                  <CalendarIcon className="text-white h-4 w-4" />
+                  <CalendarIcon className="text-[#001D38] h-4 w-4" />
                   <p className="paragraph text-sm">
                     {moment(post.createdAt).format("DD/MM, YYYY")}
                   </p>
                 </div>
                 <div className="flex items-center gap-x-1">
-                  <UserIcon className="text-white h-3 w-3" />
+                  <UserIcon className="text-[#001D38] h-3 w-3" />
                   <p className="paragraph text-sm">{post.author.name}</p>
                 </div>
               </div>

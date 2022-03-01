@@ -8,11 +8,9 @@ const Story = () => {
       <StaggeredMoveUpComponent
         key="commencing story"
         delay={0.3}
-        stylingClasses="text-center"
+        stylingClasses="text-center mt-10 mb-20"
       >
-        <h1 className="lowerHeading">
-          Câu chuyện khởi đầu
-        </h1>
+        <h1 className="lowerHeading">Câu chuyện khởi đầu</h1>
         <div className="aboutUsPageParagraph">
           <p>
             Far far away, behind the word mountains, far from the countries
@@ -27,15 +25,15 @@ const Story = () => {
         </div>
       </StaggeredMoveUpComponent>
 
+      <div className="h-[1px] w-[30px] bg-[#001D38] mx-auto"></div>
+
       {/* Mission */}
       <StaggeredMoveUpComponent
         key="Mission"
         delay={0.3}
-        stylingClasses="text-center mt-10"
+        stylingClasses="text-center mt-20 mb-20"
       >
-        <h1 className="lowerHeading">
-          Sứ mệnh & Tầm nhìn
-        </h1>
+        <h1 className="lowerHeading">Sứ mệnh & Tầm nhìn</h1>
         <div className="aboutUsPageParagraph">
           <p>
             Far far away, behind the word mountains, far from the countries
@@ -46,15 +44,15 @@ const Story = () => {
         </div>
       </StaggeredMoveUpComponent>
 
+      <div className="h-[1px] w-[30px] bg-[#001D38] mx-auto"></div>
+
       {/* Chef and Founders */}
       <StaggeredMoveUpComponent
         key="Chef and Founders"
         delay={0.3}
-        stylingClasses="text-center mt-10 mb-20"
+        stylingClasses="text-center mt-20 mb-20"
       >
-        <h1 className="lowerHeading">
-          Các nhà sáng lập
-        </h1>
+        <h1 className="lowerHeading">Các nhà sáng lập</h1>
 
         {/* Overall div of both head chef and founder */}
         <div className="md:w-[600px] xl:flex xl:gap-x-5 xl:w-[910px] mx-auto">

@@ -1,5 +1,8 @@
 import moment from "moment";
 import React, { Fragment } from "react";
+import dynamic from "next/dynamic";
+const Categories = dynamic(() => import("../../components/Blog/Categories"));
+const Author = dynamic(() => import("../../components/Blog/Author"));
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -22,7 +25,7 @@ const PostDetail = ({ post }) => {
     switch (type) {
       case "heading-three":
         return (
-          <h3 key={index} className="text-white text-xl font-semibold mb-4">
+          <h3 key={index} className="text-[#001D38] text-xl font-semibold mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -38,7 +41,7 @@ const PostDetail = ({ post }) => {
         );
       case "heading-four":
         return (
-          <h4 key={index} className="text-white text-md font-semibold mb-4">
+          <h4 key={index} className="text-[#001D38] text-md font-semibold mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -46,7 +49,7 @@ const PostDetail = ({ post }) => {
         );
       case "heading-two":
         return (
-          <h2 key={index} className="text-white text-xl font-semibold mb-4">
+          <h2 key={index} className="text-[#001D38] text-xl font-semibold mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -67,7 +70,7 @@ const PostDetail = ({ post }) => {
   };
   return (
     <Fragment>
-      <div className="shadow-lg lg:p-8">
+      <div className="shadow-md lg:p-8 py-10 lg:mb-20">
         {/* <div className="relative overflow-hidden shadow-md mb-6">
           <img
             src={post.featuredImage.url}
@@ -84,9 +87,7 @@ const PostDetail = ({ post }) => {
               </span>
             </div>
           </div>
-          <h1 className="text-white mb-8 text-3xl font-semibold">
-            {post.title}
-          </h1>
+          <h1 className="lowerHeading">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) =>
               getContentFragment(itemindex, item.text, item)
@@ -95,6 +96,9 @@ const PostDetail = ({ post }) => {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>
+
+        <Categories categories={post.categories} />
+        <Author author={post.author} />
       </div>
     </Fragment>
   );
