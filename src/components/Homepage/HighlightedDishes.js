@@ -28,7 +28,7 @@ const HighlightedDishes = () => {
       {/* Options */}
       <StaggeredMoveUpComponent
         keyName="options"
-        delay={0.4}
+        delay={0.3}
         stylingClasses="flex flex-col mt-5 px-10 mx-auto gap-y-2 md:flex-row md:justify-center md:gap-x-4"
       >
         <div
@@ -60,7 +60,7 @@ const HighlightedDishes = () => {
       {/* Contents correspoding to chosen option */}
       <StaggeredMoveUpComponent
         keyName="highlighted-dish"
-        delay={0.5}
+        delay={0.4}
         stylingClasses="mt-14"
       >
         {/* This is the container div of 3 dishes element */}

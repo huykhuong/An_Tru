@@ -59,52 +59,174 @@ const Banner = () => {
         className="bannerNavigationButton right-20"
         onClick={nextSlide}
       />
+
       {SliderData?.map((slide, index) => {
         return (
-          index === current && (
-            <div className={`relative w-full h-screen ${slide.animate}`}>
-              {/* Overlay div */}
-              <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
-                <motion.div
-                  key="overlay"
-                  variants={{
-                    initial: {
-                      y: 100,
-                      opacity: 0,
+          <div
+            key={index}
+            className={`transition-opacity duration-[800ms] w-full h-screen opacity-0 ${
+              current === index && "opacity-100"
+            } `}
+          >
+            {/* Overlay div */}
+            <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
+              <motion.div
+                key="overlay"
+                variants={{
+                  initial: {
+                    y: 100,
+                    opacity: 0,
+                  },
+                  animate: {
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      duration: 1,
+                      ease: [0.6, -0.05, 0.01, 0.99],
                     },
-                    animate: {
-                      y: 0,
-                      opacity: 1,
-                      transition: {
-                        duration: 1,
-                        ease: [0.6, -0.05, 0.01, 0.99],
-                      },
-                    },
-                  }}
-                  initial="initial"
-                  whileInView="animate"
-                >
-                  <h1 className="upperHeading text-bright_yellow">
-                    {slide.title}
-                  </h1>
-                  <h1 className="lowerHeading text-white">
-                    {slide.description}
-                  </h1>
-                </motion.div>
-              </div>
-              <Image
-                priority="true"
-                objectPosition="center"
-                objectFit="cover"
-                layout="fill"
-                src={slide.image}
-                alt={slide.title}
-              />
+                  },
+                }}
+                initial="initial"
+                whileInView="animate"
+              >
+                <h1 className="upperHeading text-bright_yellow">
+                  {slide.title}
+                </h1>
+                <h1 className="lowerHeading text-white">{slide.description}</h1>
+              </motion.div>
             </div>
-          )
+            <Image
+              priority="true"
+              objectPosition="center"
+              objectFit="cover"
+              layout="fill"
+              src={slide.image}
+              alt={slide.title}
+            />
+          </div>
         );
       })}
     </section>
+
+    //   <div className={`w-full h-screen animate-image3 `}>
+    //   {/* Overlay div */}
+    //   <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
+    //     <motion.div
+    //       key="overlay"
+    //       variants={{
+    //         initial: {
+    //           y: 100,
+    //           opacity: 0,
+    //         },
+    //         animate: {
+    //           y: 0,
+    //           opacity: 1,
+    //           transition: {
+    //             duration: 1,
+    //             ease: [0.6, -0.05, 0.01, 0.99],
+    //           },
+    //         },
+    //       }}
+    //       initial="initial"
+    //       whileInView="animate"
+    //     >
+    //       <h1 className="upperHeading text-bright_yellow">
+    //         {SliderData[2].title}
+    //       </h1>
+    //       <h1 className="lowerHeading text-white">
+    //         {SliderData[2].description}
+    //       </h1>
+    //     </motion.div>
+    //   </div>
+    //   <Image
+    //     priority="true"
+    //     objectPosition="center"
+    //     objectFit="cover"
+    //     layout="fill"
+    //     src={SliderData[2].image}
+    //     alt={SliderData[2].title}
+    //   />
+    // </div>
+
+    // <div className={`w-full h-screen animate-image2`}>
+    //   {/* Overlay div */}
+    //   <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
+    //     <motion.div
+    //       key="overlay"
+    //       variants={{
+    //         initial: {
+    //           y: 100,
+    //           opacity: 0,
+    //         },
+    //         animate: {
+    //           y: 0,
+    //           opacity: 1,
+    //           transition: {
+    //             duration: 1,
+    //             ease: [0.6, -0.05, 0.01, 0.99],
+    //           },
+    //         },
+    //       }}
+    //       initial="initial"
+    //       whileInView="animate"
+    //     >
+    //       <h1 className="upperHeading text-bright_yellow">
+    //         {SliderData[1].title}
+    //       </h1>
+    //       <h1 className="lowerHeading text-white">
+    //         {SliderData[1].description}
+    //       </h1>
+    //     </motion.div>
+    //   </div>
+    //   <Image
+    //     priority="true"
+    //     objectPosition="center"
+    //     objectFit="cover"
+    //     layout="fill"
+    //     src={SliderData[1].image}
+    //     alt={SliderData[1].title}
+    //   />
+    // </div>
+
+    // <div className={`w-full h-screen animate-image1`}>
+    //   {/* Overlay div */}
+    //   <div className="absolute top-0 right-0 px-5 flex flex-col justify-center items-center z-10 h-full w-full bg-black bg-opacity-40 text-center">
+    //     <motion.div
+    //       key="overlay"
+    //       variants={{
+    //         initial: {
+    //           y: 100,
+    //           opacity: 0,
+    //         },
+    //         animate: {
+    //           y: 0,
+    //           opacity: 1,
+    //           transition: {
+    //             duration: 1,
+    //             ease: [0.6, -0.05, 0.01, 0.99],
+    //           },
+    //         },
+    //       }}
+    //       initial="initial"
+    //       whileInView="animate"
+    //     >
+    //       <h1 className="upperHeading text-bright_yellow">
+    //         {SliderData[0].title}
+    //       </h1>
+    //       <h1 className="lowerHeading text-white">
+    //         {SliderData[0].description}
+    //       </h1>
+    //     </motion.div>
+    //   </div>
+    //   <Image
+    //     priority="true"
+    //     objectPosition="center"
+    //     objectFit="cover"
+    //     layout="fill"
+    //     src={SliderData[0].image}
+    //     alt={SliderData[0].title}
+    //   />
+    // </div>
   );
 };
 
